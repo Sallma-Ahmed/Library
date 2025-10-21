@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='../../../lib-native/crossword_6r/content/images/favicon.ico' type='image/x-icon' />
+    <title>CROSSWORD</title>
+    <link rel="stylesheet" href="../../../lib-native/crossword_6r/content/css/style.css">
+    <link rel="stylesheet" href="./style/lo-style.css">
+    <script src="../../../lib-native/crossword_6r/content/js/lottie-min.js"></script>
+    <script src="../../../lib-native/crossword_6r/content/js/vue-min.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+
+
+</head>
+
+<body class="dragQ">
+    <div id="crossWord" data-urlpage="data">
+        <div class="loader" v-show=" !this.isSuccess || !this.isLoaded"></div>
+
+        <div class="isSuccess" v-show=" this.isSuccess && this.isLoaded">
+            <div class="startButton" id="introBook" @click="startClickGame()"></div>
+            <div class="headerTopButtons">
+                <div class="rightButton">
+                </div>
+                <div class="leftButton">
+                    <button class="back" @click="GoToHome()"></button>
+                    <div class="music" @click="muteMusic()" :class="this.bgMusic ? 'play' : 'mute'"></div>
+
+                </div>
+            </div>
+            <div class="table">
+
+                <div class="row" v-for="(row, index)  in RowNumLine">
+                    <div class="item" v-for="(col, index)  in ColumnNumLine" :data-col="col" :data-row="row"
+                        v-on:click="MouseMoveItem()">
+                    </div>
+
+                </div>
+            </div>
+            <div class="keyWords" id="keyWords">
+                <div class="topQuiz" v-for="(post, index)  in Items[0].posts" v-if="post.activeClass">
+                    <h1 class="numberQuiz">{{clickNumber}}</h1>
+                    <p class="quiz" v-html="post.quiz"> </p>
+                    <div class="items-Squares" :data-state="post.wordId">
+                        
+                    </div>
+                </div>
+                <div class="downKey">
+                    <ul class="jkeyboard">
+                        <li class="jline">
+                            <ul v-for="(KeyW, index)  in keyWordsClicked">
+                                <li class="jkey letter" v-for="(line, index)  in KeyW.lines"
+                                    @click="charactersClicked()">{{line.key}}</li>
+                            </ul>
+                        </li>
+
+                        <li class="jline">
+                            <ul>
+                                <li class="jkey wordSplit" @click="wordSplitClicked()"></li>
+                                <li class="jkey enter" @click="checkValue()"></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="feedBack">
+                <div class="wonderFul">
+                    <p v-for="(post, index)  in Items[0].posts" v-if="post.activeClass" v-html="post.wonderFul"></p>
+                </div>
+                <button class="GoHome" @click="ClickBack(), finish() "></button>
+            </div>
+            <div id="FeedBackEnd">
+                <button class="ReloadPage" @click="ReloadPage()"></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../../lib-native/crossword_6r/content/js/vmain.js"></script>
+<script src="../../../lib-native/crossword_6r/content/js/animation-min.js"></script>
+
+</html>

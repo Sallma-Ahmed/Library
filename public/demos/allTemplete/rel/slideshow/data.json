@@ -1,0 +1,206 @@
+{
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "BloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": null,
+    "subType": "Choose",
+    "startTime": "",
+    "endTime": "",
+    "slides": [
+        {
+            "img": "images/s/s1.png"
+        },
+        {
+            "img": "images/s/s2.png"
+        },
+        {
+            "img": "images/s/s3.png"
+        },
+        {
+            "img": "images/s/s4.png"
+        },
+        {
+            "img": "images/s/s5.png"
+        }
+    ],
+    "questions": [
+        {
+            "type": 1,
+            "subtype": "text",
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "learningOutCome": null,
+            "questionType": "text",
+            "answersType": "text",
+            "text": ["أيٌّ مِنْ تِلكَ الأَسْمَاءِ يَعْنِي كَثِيرَ المَغْفِرَة؟"],
+            "img": null,
+            "sound": "sound/q/1.mp3",
+            "answers": [
+                {
+                    "text":[ "الْغَفُورُ"],
+                    "img": null,
+                    "sound": null,
+                    "isRight": true,
+                    "checked": false
+                },
+                {
+                    "text": ["الْكَرِيمُ"],
+                    "img": null,
+                    "sound": null,
+                    "isRight": false,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "subtype": "text",
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "learningOutCome": null,
+            "questionType": "text",
+            "answersType": "text",
+            "text": ["أيٌّ مِنْ تِلكَ الأدْعِيَةِ نَدْعُو بِهِ لِطَلَبِ الْمَغْفِرَةِ مِنَ اللهِ؟"],
+            "img": null,
+            "sound": "sound/q/2.mp3",
+            "answers": [
+                {
+                    "text":[ "الْحَمْدُ للهِ الْعَظِيمِ"],
+                    "img": null,
+                    "sound": null,
+                    "isRight": false,
+                    "checked": false
+                },
+                {
+                    "text": ["أَسْتَغْفِرُ اللهَ الْعَظِيمَ"],
+                    "img": null,
+                    "sound": null,
+                    "isRight": true,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "subtype": "images",
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "questionType": "text",
+            "answersType": "text",
+            "text": ["بِمَ تَشْعُرُ إِذَا أَخْطَأَ أَحَدٌ فِي حَقِّكَ، ثُمَّ أَصْلَحَ خَطَأَهُ، وَاعْتَذَرَ إِلَيْكَ؟"],
+            "img": null,
+            "sound": "sound/q/3.mp3",
+            "answers": [
+                {
+                    "text": null,
+                    "img": "images/q/typ2-a1-1.png",
+                    "sound": null,
+                    "isRight": false,
+                    "checked": false
+                },
+                {
+                    "text": null,
+                    "img": "images/q/typ2-a1-2.png",
+                    "sound": null,
+                    "isRight": true,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "subtype": "images",
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "questionType": "text",
+            "answersType": "image",
+            "text":[ "لَعِبَ أَحْمَدُ بِالْكُرَةِ فِي الْبَيْتِ، فَكَسَرَ الزَّهْرِيَّةَ، ثُمَّ أَرَادَ أَنْ يُصْلِحَ خَطَأَهُ، فَمَاذَا يَفْعَلُ؟"],
+            "img": null,
+            "sound": "sound/q/4.mp3",
+            "answers": [
+                {
+                    "text": null,
+                    "img": "images/q/typ2-a2-1.png",
+                    "sound": null,
+                    "isRight": true,
+                    "checked": false
+                },
+                {
+                    "text": null,
+                    "img": "images/q/typ2-a2-2.png",
+                    "sound": null,
+                    "isRight": false,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "subtype": "truefalse",
+            "tfType": "text",
+            "text": ["مَعْنَى الْغَفُور: الَّذِي يَنْصُرُ."],
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "questionType": "text",
+            "answersType": "image",
+            "img": null,
+            "sound": "sound/q/5.mp3",
+            "answers": [
+                {
+                    "isRight": false,
+                    "checked": false
+                },
+                {
+                    "isRight": true,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "subtype": "truefalse",
+            "tfType": "text",
+            "text": ["اللَّهُ يَسْمَعُ دُعَاءَنَا وَاسْتِغْفَارَنَا مَهْمَا اخْتَلَفَتْ لُغَاتُنَا."],
+            "active": false,
+            "numberOfTrial": 0,
+            "startTime": "",
+            "endTime": "",
+            "questionType": "text",
+            "answersType": "image",
+            "img": null,
+            "sound": "sound/q/6.mp3",
+            "answers": [
+                {
+                    "isRight": true,
+                    "checked": false
+                },
+                {
+                    "isRight": false,
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

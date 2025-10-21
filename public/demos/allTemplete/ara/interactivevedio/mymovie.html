@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='../../../lib-native/interactivevedio/assets/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/interactivevedio/assets/style/lo-style.css">
+    <script src="../../../lib-native/interactivevedio/assets/js/vue.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+    <link href="../../../lib-native/interactivevedio/assets/style/video.css" rel="stylesheet" />
+    <title></title>
+    <style>
+        .plyr--video {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* .plyr__controls {
+            display: none;
+        } */
+        .w77f {
+            width: 77% !important;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="interactiveVedio" data-urlpage="data">
+        <div class="loader" v-show="!isSuccess || !isLoading"></div>
+        <div class="isSuccess" v-show=" isSuccess && isLoading">
+            <div class="content" @click="get()" id="contentInteractiveVedio" v-show="isSuccess && isLoading">
+                <template v-show="!this.quizVedio">
+                    <template v-show="isSuccess && isLoading ">
+                        <div v-for="(video,index) in videos"
+                            :class="{'active': video.active,'disabled': !video.active}">
+                            <video :id="index" :name="video.name"  width="100%" height="100%">
+                                <source :src="video.name" type="video/mp4">
+                            </video>
+                        </div>
+                    </template>
+                </template>
+                <div class="black-bg" v-show="this.quizVedio">
+
+                    <div id="loQuestions">
+                        <template   v-if="this.quizVedio && activeQuestion.quiz[quizCounter].type == 1 ">
+                            <div class="questions" v-for="quiz in activeQuestion.quiz" :class="{'active': quiz.active}">
+                                <div class="title">
+                                    <p>{{title}}</p>
+                                </div>
+                                <div class="parag">
+                                    <p v-html="parag"></p>
+                                </div>
+                                <div class="quiz">
+                                    <div class="question">
+                                        <p>{{quiz.question}}</p>
+                                    </div>
+                                    <div class="chooses">
+                                        <div class="choose" v-for="choose in quiz.chooses"
+                                            @click="chooseQuestion(choose,event,quiz)">
+                                            <p>{{choose.word}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <div class="feedback" v-if="this.quizVedio && feedback">
+                            <div class="borderFeedBack">
+                                <div class="answer">
+                                    <p :class="{'true': expression,'false': !expression}">{{expressText}}</p>
+                                </div>
+                                <div class="details">
+                                    <p v-for="parag in expressionParag">{{parag}}</p>
+                                </div>
+                                <div class="reload" @click="reload()" v-if="!expression"></div>
+                                <div class="next" @click="next()" :class="{'center':expression}"></div>
+                            </div>
+                        </div>
+                        <!--                    
+                    <div class="questions" v-if="this.quizVedio && activeQuestion.type == 2">
+                        <div class="title">
+                            <p>{{title}}</p>
+                        </div>
+                        <div class="border">
+                            <div class="quiz" :class="{'w77f':activeQuestion.image == ''}">
+                                <div class="question">
+                                    <template v-for="(input,index) in activeQuestion.inputs">
+                                        <p>{{input.paragStart}}</p>
+                                        <div class="inputs" v-if="input.numOfInput >= 1">
+                                            <input type="text" class="input" :index="index"
+                                                @blur="checkValueInput(event,index)">
+                                        </div>
+                                        <p v-if="input.numOfInput >1">{{input.sign}}</p>
+                                        <div class="inputs" v-if="input.numOfInput >= 2">
+                                            <input type="text" class="input" :index="index"
+                                                @blur="checkValueInput(event,index)">
+                                        </div>
+                                        <p v-if="input.numOfInput >2">{{input.sign}}</p>
+                                        <div class="inputs" v-if="input.numOfInput >= 3">
+                                            <input type="text" class="input" :index="index"
+                                                @blur="checkValueInput(event,index)">
+                                        </div>
+                                        <p v-if="input.numOfInput >3">{{input.paragEnd}}</p>
+                                    </template>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="../../../lib-native/interactivevedio/assets/js/main.js"></script>
+    <script src="../../../lib-native/interactivevedio/assets/js/video.js"></script>
+
+    <!-- <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script> -->
+</body>
+
+</html>

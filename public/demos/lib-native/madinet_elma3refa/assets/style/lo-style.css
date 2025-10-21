@@ -1,0 +1,1224 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: Vazirmatn;
+}
+
+p {
+  font-size: 1.8vw;
+  font-family: Vazirmatn;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  -webkit-text-size-adjust: 100%;
+  font-family: Vazirmatn;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+body .resize {
+  width: 100vw !important;
+  height: 66.6666666667vw !important;
+}
+body #Soltan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+body #Soltan .logo {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 8vh;
+  height: 7vh;
+  right: 6%;
+  top: 1%;
+  position: absolute;
+  pointer-events: auto;
+  z-index: 1000000;
+}
+body #Soltan .loader {
+  background-color: #fff;
+  background-image: url(../images/preloader.gif);
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: absolute;
+  z-index: 10;
+  top: auto;
+  right: auto;
+}
+body #Soltan .isSuccess {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+body #Soltan #startPage {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  background-color: #88e6f0;
+}
+body #Soltan .startButton {
+  position: absolute;
+  width: 18vw;
+  height: 16vw;
+  bottom: 23%;
+  left: 35%;
+  z-index: 1001;
+  cursor: pointer;
+}
+body #Soltan .music {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  z-index: 1000;
+  cursor: pointer;
+}
+body #Soltan .help {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  top: 6vw;
+  left: 1vw;
+  z-index: 1000;
+  cursor: pointer;
+}
+body #Soltan .home {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  top: 11vw;
+  left: 1vw;
+  cursor: pointer;
+}
+body #Soltan .langing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+body #Soltan .langing .doorButton {
+  position: absolute;
+  width: 8.5vw;
+  height: 14vw;
+  z-index: 900;
+  cursor: pointer;
+}
+body #Soltan .langing .doorButton.left {
+  bottom: 35%;
+  left: 15%;
+}
+body #Soltan .langing .doorButton.center {
+  bottom: 43%;
+  left: 47%;
+}
+body #Soltan .langing .doorButton.right {
+  bottom: 37%;
+  right: 12%;
+}
+body #Soltan .container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body #Soltan .container .room,
+body #Soltan .container .popUp {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 64.7vw;
+  height: 39.8vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5vw;
+  position: relative;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: justify;
+  z-index: 100;
+}
+body #Soltan .container .room .hint,
+body #Soltan .container .popUp .hint {
+  width: 5vw;
+  height: 8vw;
+  position: absolute;
+  z-index: 3000000000;
+  bottom: 0vw;
+  right: -1vw;
+  cursor: pointer;
+}
+body #Soltan .container .room p,
+body #Soltan .container .popUp p {
+  color: white;
+  line-height: 1.8;
+}
+body #Soltan .container .room .expand,
+body #Soltan .container .room .minmize,
+body #Soltan .container .room .expand-dim,
+body #Soltan .container .popUp .expand,
+body #Soltan .container .popUp .minmize,
+body #Soltan .container .popUp .expand-dim {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  bottom: 36vw;
+  right: 0vw;
+  cursor: pointer;
+}
+body #Soltan .container .room .expand-dim,
+body #Soltan .container .popUp .expand-dim {
+  pointer-events: none;
+}
+body #Soltan .container .room .done,
+body #Soltan .container .popUp .done {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 8vw;
+  height: 4vw;
+  position: absolute;
+  bottom: -0.5vw;
+  left: 30vw;
+  cursor: pointer;
+}
+body #Soltan .container .room .timer,
+body #Soltan .container .popUp .timer {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 6vw;
+  height: 7vw;
+  position: absolute;
+  bottom: 33vw;
+  left: -1.5vw;
+}
+body #Soltan .container .room .timer .timer-shape,
+body #Soltan .container .popUp .timer .timer-shape {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 3.5vw;
+  height: 3.5vw;
+  position: absolute;
+  top: 4.5vw;
+  left: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 1.5vw;
+  font-family: Cocon;
+}
+body #Soltan .container .room .stop,
+body #Soltan .container .popUp .stop {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  bottom: 1.3vw;
+  left: 8.5vw;
+  cursor: pointer;
+}
+body #Soltan .container .room .status,
+body #Soltan .container .popUp .status {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 19vw;
+  height: 3.5vw;
+  position: absolute;
+  bottom: -2vw;
+  left: 24vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body #Soltan .container .room .status .type,
+body #Soltan .container .popUp .status .type {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0.1vw;
+  right: 0.3vw;
+}
+body #Soltan .container .room .status .type .statusDim,
+body #Soltan .container .room .status .type .statusTrue,
+body #Soltan .container .room .status .type .statusFalse,
+body #Soltan .container .room .status .type .statusOpen,
+body #Soltan .container .popUp .status .type .statusDim,
+body #Soltan .container .popUp .status .type .statusTrue,
+body #Soltan .container .popUp .status .type .statusFalse,
+body #Soltan .container .popUp .status .type .statusOpen {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 1.3vw;
+  height: 1.8vw;
+  margin: 0.08vw;
+}
+body #Soltan .container .room .sound,
+body #Soltan .container .popUp .sound {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  bottom: 1.3vw;
+  left: 4vw;
+  cursor: pointer;
+}
+body #Soltan .container .room .title,
+body #Soltan .container .popUp .title {
+  width: 100%;
+}
+body #Soltan .container .room .title p,
+body #Soltan .container .popUp .title p {
+  color: #F6C423;
+  text-align: center;
+}
+body #Soltan .container .room .button,
+body #Soltan .container .popUp .button {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  pointer-events: auto;
+}
+body #Soltan .container .room .button.next,
+body #Soltan .container .popUp .button.next {
+  background-image: url(../images/next.png);
+  top: 16vw;
+  left: -2vw;
+}
+body #Soltan .container .room .button.next_dim,
+body #Soltan .container .popUp .button.next_dim {
+  background-image: url(../images/next_dim.png);
+  top: 16vw;
+  left: -2vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .button.pre,
+body #Soltan .container .popUp .button.pre {
+  background-image: url(../images/pre.png);
+  right: -2vw;
+  top: 16vw;
+}
+body #Soltan .container .room .button.pre_dim,
+body #Soltan .container .popUp .button.pre_dim {
+  background-image: url(../images/pre_dim.png);
+  right: -2vw;
+  top: 16vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .button.exit,
+body #Soltan .container .popUp .button.exit {
+  background-image: url(../images/exit.png);
+  top: 16vw;
+  left: -2vw;
+}
+body #Soltan .container .room .choose,
+body #Soltan .container .room .trueFalse,
+body #Soltan .container .popUp .choose,
+body #Soltan .container .popUp .trueFalse {
+  width: 100%;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  display: none;
+  -webkit-animation: disShowQ 0.7s normal;
+          animation: disShowQ 0.7s normal;
+}
+body #Soltan .container .room .choose.active,
+body #Soltan .container .room .trueFalse.active,
+body #Soltan .container .popUp .choose.active,
+body #Soltan .container .popUp .trueFalse.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-animation: showQ 0.7s normal;
+          animation: showQ 0.7s normal;
+  opacity: 1;
+}
+@-webkit-keyframes showQ {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showQ {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes disShowQ {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disShowQ {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body #Soltan .container .room .choose .questionChoose,
+body #Soltan .container .room .choose .questionTrueFalse,
+body #Soltan .container .room .trueFalse .questionChoose,
+body #Soltan .container .room .trueFalse .questionTrueFalse,
+body #Soltan .container .popUp .choose .questionChoose,
+body #Soltan .container .popUp .choose .questionTrueFalse,
+body #Soltan .container .popUp .trueFalse .questionChoose,
+body #Soltan .container .popUp .trueFalse .questionTrueFalse {
+  width: 40vw;
+  height: 8vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+body #Soltan .container .room .choose .chooses,
+body #Soltan .container .room .trueFalse .chooses,
+body #Soltan .container .popUp .choose .chooses,
+body #Soltan .container .popUp .trueFalse .chooses {
+  width: 36vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body #Soltan .container .room .choose .chooses .answersChoose,
+body #Soltan .container .room .choose .chooses .answersTrueFalse,
+body #Soltan .container .room .trueFalse .chooses .answersChoose,
+body #Soltan .container .room .trueFalse .chooses .answersTrueFalse,
+body #Soltan .container .popUp .choose .chooses .answersChoose,
+body #Soltan .container .popUp .choose .chooses .answersTrueFalse,
+body #Soltan .container .popUp .trueFalse .chooses .answersChoose,
+body #Soltan .container .popUp .trueFalse .chooses .answersTrueFalse {
+  width: 15vw;
+  height: 7vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  margin: 1vw;
+  font-family: Vazirmatn;
+  cursor: pointer;
+  font-size: 1.8vw;
+}
+body #Soltan .container .room .choose .chooses .answersChoose.true,
+body #Soltan .container .room .choose .chooses .answersTrueFalse.true,
+body #Soltan .container .room .trueFalse .chooses .answersChoose.true,
+body #Soltan .container .room .trueFalse .chooses .answersTrueFalse.true,
+body #Soltan .container .popUp .choose .chooses .answersChoose.true,
+body #Soltan .container .popUp .choose .chooses .answersTrueFalse.true,
+body #Soltan .container .popUp .trueFalse .chooses .answersChoose.true,
+body #Soltan .container .popUp .trueFalse .chooses .answersTrueFalse.true {
+  border: solid #25D600;
+  border-radius: 1.5vw 1.5vw 2.5vw 2.5vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .choose .chooses .answersChoose.false,
+body #Soltan .container .room .choose .chooses .answersTrueFalse.false,
+body #Soltan .container .room .trueFalse .chooses .answersChoose.false,
+body #Soltan .container .room .trueFalse .chooses .answersTrueFalse.false,
+body #Soltan .container .popUp .choose .chooses .answersChoose.false,
+body #Soltan .container .popUp .choose .chooses .answersTrueFalse.false,
+body #Soltan .container .popUp .trueFalse .chooses .answersChoose.false,
+body #Soltan .container .popUp .trueFalse .chooses .answersTrueFalse.false {
+  border: solid #D30000;
+  border-radius: 1.5vw 1.5vw 2.5vw 2.5vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .choose .chooses .answersTrueFalse,
+body #Soltan .container .room .trueFalse .chooses .answersTrueFalse,
+body #Soltan .container .popUp .choose .chooses .answersTrueFalse,
+body #Soltan .container .popUp .trueFalse .chooses .answersTrueFalse {
+  font-size: 3vw;
+  font-weight: bold;
+}
+body #Soltan .container .room .select,
+body #Soltan .container .popUp .select {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+  -webkit-animation: disShowQ 0.7s normal;
+          animation: disShowQ 0.7s normal;
+}
+body #Soltan .container .room .select .content,
+body #Soltan .container .popUp .select .content {
+  height: 81%;
+}
+body #Soltan .container .room .select .passage p,
+body #Soltan .container .popUp .select .passage p {
+  font-size: 1.6vw;
+  -moz-user-select: text;
+   -ms-user-select: text;
+       user-select: text;
+  -webkit-user-select: text;
+  -webkit-text-size-adjust: 100%;
+}
+body #Soltan .container .room .select .passage p span,
+body #Soltan .container .popUp .select .passage p span {
+  -moz-user-select: text;
+   -ms-user-select: text;
+       user-select: text;
+  -webkit-user-select: text;
+  font-size: 1.6vw;
+  -webkit-text-size-adjust: 100%;
+}
+body #Soltan .container .room .select .passage .flex,
+body #Soltan .container .popUp .select .passage .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body #Soltan .container .room .select .questionSelect,
+body #Soltan .container .popUp .select .questionSelect {
+  width: 41.5vw;
+  min-height: 5.5vw;
+  max-height: 4.5vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  position: relative;
+}
+body #Soltan .container .room .select .questionSelect .btn-select,
+body #Soltan .container .popUp .select .questionSelect .btn-select {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+}
+body #Soltan .container .room .select .questionSelect .btn-select.CheckSelectDim,
+body #Soltan .container .popUp .select .questionSelect .btn-select.CheckSelectDim {
+  top: 5vw;
+  left: 4vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .select .questionSelect .btn-select.CheckSelectDim.active,
+body #Soltan .container .popUp .select .questionSelect .btn-select.CheckSelectDim.active {
+  pointer-events: auto;
+}
+body #Soltan .container .room .select .questionSelect .btn-select.removeSelectDim,
+body #Soltan .container .popUp .select .questionSelect .btn-select.removeSelectDim {
+  top: 5vw;
+  left: 7.5vw;
+  pointer-events: none;
+}
+body #Soltan .container .room .select .questionSelect .btn-select.removeSelectDim.active,
+body #Soltan .container .popUp .select .questionSelect .btn-select.removeSelectDim.active {
+  pointer-events: auto;
+}
+body #Soltan .container .room .select .questionSelect .btn-select.showSelect,
+body #Soltan .container .popUp .select .questionSelect .btn-select.showSelect {
+  width: 10vw;
+  height: 3vw;
+  bottom: -2.5vw;
+  left: -6.5vw;
+}
+body #Soltan .container .room .select ::-moz-selection, body #Soltan .container .popUp .select ::-moz-selection {
+  background-color: #df9f20;
+}
+body #Soltan .container .room .select ::selection,
+body #Soltan .container .popUp .select ::selection {
+  background-color: #df9f20;
+}
+@supports (-webkit-appearance: none) {
+  body #Soltan .container .room .select ::-moz-selection, body #Soltan .container .popUp .select ::-moz-selection {
+    background-color: #df9f20;
+  }
+  body #Soltan .container .room .select ::selection,
+  body #Soltan .container .popUp .select ::selection {
+    background-color: #df9f20;
+  }
+}
+body #Soltan .container .room .select .trueText,
+body #Soltan .container .popUp .select .trueText {
+  background-color: #25D600;
+  -moz-user-select: none !important;
+   -ms-user-select: none !important;
+       user-select: none !important;
+  -webkit-user-select: none !important;
+}
+body #Soltan .container .room .select .falseText,
+body #Soltan .container .popUp .select .falseText {
+  background-color: #D30000;
+  -moz-user-select: none !important;
+   -ms-user-select: none !important;
+       user-select: none !important;
+  -webkit-user-select: none !important;
+}
+body #Soltan .container .room .select .showText,
+body #Soltan .container .popUp .select .showText {
+  background-color: #25D600;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none !important;
+}
+body #Soltan .container .room .select.active,
+body #Soltan .container .popUp .select.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-animation: showQ 0.7s normal;
+          animation: showQ 0.7s normal;
+  opacity: 1;
+}
+@keyframes showQ {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disShowQ {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body #Soltan .container .room .punctuate,
+body #Soltan .container .popUp .punctuate {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+  -webkit-animation: disShowQ 0.7s normal;
+          animation: disShowQ 0.7s normal;
+}
+body #Soltan .container .room .punctuate.active,
+body #Soltan .container .popUp .punctuate.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-animation: showQ 0.7s normal;
+          animation: showQ 0.7s normal;
+  opacity: 1;
+}
+@keyframes showQ {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disShowQ {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body #Soltan .container .room .punctuate .question,
+body #Soltan .container .popUp .punctuate .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1.8vw;
+  color: white;
+  line-height: 2.5;
+}
+body #Soltan .container .room .punctuate .question div,
+body #Soltan .container .popUp .punctuate .question div {
+  font-size: 1.5vw;
+  font-family: Vazirmatn;
+}
+body #Soltan .container .room .punctuate .question .true,
+body #Soltan .container .popUp .punctuate .question .true {
+  color: #FDC435;
+  position: relative;
+}
+body #Soltan .container .room .punctuate .question .chooses,
+body #Soltan .container .popUp .punctuate .question .chooses {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  bottom: 3.5vw;
+  left: -8vw;
+}
+body #Soltan .container .room .punctuate .question .chooses .answer,
+body #Soltan .container .popUp .punctuate .question .chooses .answer {
+  background-color: #FDC435;
+  width: 6vw;
+  height: 3vw;
+  text-align: center;
+  margin: 0.3vw;
+  cursor: pointer;
+  border-radius: 1.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 4px 3px 0px 2px rgba(241, 161, 43, 0.95);
+          box-shadow: 4px 3px 0px 2px rgba(241, 161, 43, 0.95);
+}
+body #Soltan .container .room .punctuate .question .chooses .answer.poniterEvent,
+body #Soltan .container .popUp .punctuate .question .chooses .answer.poniterEvent {
+  pointer-events: none !important;
+}
+body #Soltan .container .room .punctuate .question .chooses .answer.true,
+body #Soltan .container .popUp .punctuate .question .chooses .answer.true {
+  background-color: #22AF00;
+  -webkit-box-shadow: 4px 3px 0px 2px rgba(21, 109, 0, 0.95);
+          box-shadow: 4px 3px 0px 2px rgba(21, 109, 0, 0.95);
+  color: black;
+}
+body #Soltan .container .room .punctuate .question .chooses .answer.false,
+body #Soltan .container .popUp .punctuate .question .chooses .answer.false {
+  background-color: #D30000;
+  -webkit-box-shadow: 4px 3px 0px 2px rgba(175, 26, 14, 0.75);
+          box-shadow: 4px 3px 0px 2px rgba(175, 26, 14, 0.75);
+  color: black;
+}
+body #Soltan .container .room .punctuate .question .chooses.poniterEvent,
+body #Soltan .container .popUp .punctuate .question .chooses.poniterEvent {
+  pointer-events: none;
+  display: none;
+  left: -20vw;
+}
+body #Soltan .container .room .punctuate .question .trueWord,
+body #Soltan .container .popUp .punctuate .question .trueWord {
+  color: #22AF00;
+  pointer-events: none;
+}
+body #Soltan .container .room .punctuate .question .falseWord,
+body #Soltan .container .popUp .punctuate .question .falseWord {
+  color: #D30000;
+  pointer-events: none;
+}
+body #Soltan .container .pop_text {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  bottom: 23vw;
+  right: 12vw;
+  z-index: 2000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2vw;
+  text-align: center;
+}
+body #Soltan .container .pop_text.inside {
+  bottom: 10vw;
+  right: -4vw;
+}
+body #Soltan .container .pop_text p {
+  color: black;
+  line-height: unset;
+  font-size: 1.5vw;
+  text-align: center;
+}
+body #Soltan .instruction {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body #Soltan .instruction .instructionBody {
+  width: 70vw;
+  height: 42.8vw;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body #Soltan .instruction .instructionBody .row {
+  background-size: 100% 100%;
+  width: 60vw;
+  height: 4.7vw;
+  background-color: rgba(57, 33, 18, 0.8);
+  border-radius: 0.8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.4vw;
+}
+body #Soltan .instruction .instructionBody .row .image {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body #Soltan .instruction .instructionBody .row .image img {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.twoImg {
+  width: 7vw;
+  height: 3.5vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.done {
+  width: 5.5vw;
+  height: 3vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.showanswer {
+  width: 7vw;
+  height: 3vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.progress {
+  width: 8vw;
+  height: 2vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.masbah {
+  width: 5vw;
+  height: 5vw;
+}
+body #Soltan .instruction .instructionBody .row .image img.timer {
+  width: 3vw;
+  height: 3.5vw;
+}
+body #Soltan .instruction .instructionBody .text {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0.5vw;
+}
+body #Soltan .instruction .instructionBody .text p {
+  color: #FFFFFF;
+  font-size: 1.5vw;
+}
+body #Soltan .instruction .instructionBody .text p span {
+  color: #EAB038;
+}
+body #Soltan .instruction .skip {
+  background-image: url(../images/icons/skip.png);
+  background-size: 100% 100%;
+  width: 9vw;
+  height: 4vw;
+  position: absolute;
+  bottom: 0.1vw;
+  left: 6vw;
+  cursor: pointer;
+}
+body #Soltan .instruction .next {
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  background-image: url(../images/icons/next-icon.png);
+  background-size: 100% 100%;
+  top: 19vw;
+  right: -1vw;
+  cursor: pointer;
+}
+body #Soltan .instruction .next.nextDim {
+  background-image: url(../images/icons/next-dim-icon.png);
+  pointer-events: none;
+}
+body #Soltan .instruction .prev {
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  background-image: url(../images/icons/prev-icon.png);
+  background-size: 100% 100%;
+  top: 19vw;
+  left: -1vw;
+  cursor: pointer;
+}
+body #Soltan .instruction .prev.prevDim {
+  background-image: url(../images/icons/prev-dim-icon.png);
+  pointer-events: none;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1100;
+  -webkit-animation: mymove 1.3s normal;
+          animation: mymove 1.3s normal;
+  opacity: 0;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#doorLeft,
+#doorCenter,
+#doorRight {
+  position: absolute;
+  width: 100%;
+}
+
+#starLeft,
+#starCenter,
+#starRight,
+#soltanDoor {
+  position: absolute;
+  width: 100%;
+}
+
+#doorInHome {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+#characterInside {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#soltanDoor {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.poniterEvent {
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 1180/820) {
+  body #Soltan #startPage {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  body #Soltan #doorLeft,
+  body #Soltan #starLeft {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  body #Soltan .startButton {
+    bottom: 25vh;
+    left: 33%;
+  }
+  body #Soltan .doorLeftButton {
+    bottom: 32vh;
+    left: 14%;
+  }
+  body #Soltan .container {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}/*# sourceMappingURL=lo-style.css.map */

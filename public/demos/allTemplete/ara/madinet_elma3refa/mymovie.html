@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='../../../lib-native/madinet_elma3refa-v3/assets/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/madinet_elma3refa/assets/style/lo-style.css">
+    <link rel="stylesheet" href="../../../lib-native/madinet_elma3refa/assets/style/images.css">
+    <script src="../../../lib-native/madinet_elma3refa/assets/js/lottie-min.js"></script>
+    <script src="../../../lib-native/madinet_elma3refa/assets/js/vue.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+
+    <style>
+        body #Soltan .container .pop_text p {
+            font-size: 1.3vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="Soltan" @click="resetTime()" data-urlpage="data">
+        <div class="logo" v-show=" isSuccess && isLoading"></div>
+        <div class="loader" v-show="!isSuccess || !isLoading"></div>
+
+        <div class="shadow" v-if="shadow"></div>
+        <div class="isSuccess" v-show=" isSuccess && isLoading">
+            <template v-if="!startLo">
+                <div id="startPage"></div>
+                <div class="startButton" @click="startButton()"></div>
+            </template>
+            <template v-show="startLo && !instractionsView">
+                <div v-show="startLo" class="music" @click="muteMusic()" :class="bgMusic ? 'play' : 'mute'"></div>
+                <div v-show="startLo" id="instruction" class="help"  @click="help()"></div>
+                <div class="langing" v-show="activeDoor == null">
+                    <template>
+                        <div id="doorLeft"></div>
+                        <div class="doorButton left" @click="getDoor(0)"></div>
+                        <div id="starLeft"></div>
+                    </template>
+                    <template>
+                        <div id="doorCenter"></div>
+                        <div class="doorButton center" @click="getDoor(1)"></div>
+                        <div id="starCenter"></div>
+                    </template>
+                    <template>
+                        <div id="doorRight"></div>
+                        <div class="doorButton right" @click="getDoor(2)"></div>
+                        <div id="starRight"></div>
+                    </template>
+                    <div id="soltanDoor"></div>
+                </div>
+
+            </template>
+
+            <template>
+                <div class="container">
+                    <div class="home" @click="home()"></div>
+                    <template v-show="popupIcon">
+                        <div class="popUp">
+                            <template v-show="activeDoor != null">
+                                <div class="done" @click="PopupDone()" v-if="counterPopup == 0"></div>
+                                <div class="sound" :class="passageMusic ? 'play' : 'pause'" @click="playPassageMusic()">
+                                </div>
+                                <div class="stop" @click="stopPassageMusic()"></div>
+                                <div class="minmize" @click="TogglePopup()" v-if="counterPopup > 0"></div>
+                                <div class="Popup" v-if="activeDoor != null">
+                                    <p v-html="this.posts[0].doors[activeDoor].passage"></p>
+                                </div>
+                                <!-- <div class="pop_text" v-if="showPOpUpText">
+                                    <p>{{readText}}</p>
+                                </div> -->
+                            </template>
+                        </div>
+                    </template>
+                    <template v-show="!popupIcon">
+                        <div id="doorInHome"></div>
+                        <div id="characterInside">
+                            <div class="pop_text" v-if="showPOpUpText">
+                                <p v-if="showreadText">{{this.posts[0].readText}}</p>
+                                <p v-if="showCorrectText">{{this.shuffledCorrectWords[0].text}}</p>
+                                <p v-if="showWrongText">{{this.shuffledWrogWords[0].text}}</p>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template v-show="!popupIcon">
+                        <div class="room">
+                            <template v-show="!popupIcon">
+                                <div class="timer" v-if="!this.solvedQuestion">
+                                    <div class="timer-shape">{{countDown}}</div>
+                                </div>
+                                <div class="status">
+                                    <div class="type">
+                                        <template v-if="activeDoor == 0">
+                                            <template v-for="status in this.statusesLeftDoor">
+                                                <div
+                                                    :class="{'statusDim': status ==  dimmedStatus , 'statusTrue' : status == trueStatus , 'statusFalse' : status == falseStatus , 'statusOpen' : status == openStatus}">
+                                                </div>
+                                            </template>
+                                        </template>
+                                        <template v-if="activeDoor == 1">
+                                            <template v-for="status in this.statusesCenterDoor">
+                                                <div
+                                                    :class="{'statusDim': status ==  dimmedStatus , 'statusTrue' : status == trueStatus , 'statusFalse' : status == falseStatus , 'statusOpen' : status == openStatus}">
+                                                </div>
+                                            </template>
+
+                                        </template>
+                                        <template v-if="activeDoor == 2">
+                                            <template v-for="status in this.statusesRightDoor">
+                                                <div
+                                                    :class="{'statusDim': status ==  dimmedStatus , 'statusTrue' : status == trueStatus , 'statusFalse' : status == falseStatus , 'statusOpen' : status == openStatus}">
+                                                </div>
+                                            </template>
+
+                                        </template>
+                                    </div>
+                                </div>
+                                <template v-if=" activeDoor != null ">
+                                    <div class="choose"
+                                        v-for=" question in this.posts[0].doors[activeDoor].choose.questions"
+                                        :class="{'active': question.active}">
+                                        <div class="hint" v-if="hint" @click="getHint(question)"></div>
+                                        <div class="pop_text inside" v-if="showPOpUpTextInside">
+                                            <p v-if="!questionHint  && !questionHintTitleShow">{{clickText}}</p>
+                                            <p v-if="questionHint && !questionHintTitleShow" v-html="question.hint"></p>
+                                            <p v-if="questionHintTitleShow">{{questionHintText}}</p>
+                                        </div>
+
+                                        <div class="expand" @click="TogglePopup(question)"></div>
+                                        <div class="title">
+
+                                            <p>{{question.title}}</p>
+                                        </div>
+                                        <div class="questionChoose">
+                                            <p>{{question.parag}} </p>
+                                        </div>
+
+                                        <div class="chooses">
+                                            <template v-for=" answer in question.answers">
+                                                <div class="answersChoose" @click="checkChoose($event, answer,question)"
+                                                    :class="{'correct': answer.answer , 'false': answer.check && !answer.answer , 'true':answer.answer && solvedQuestion}">
+                                                    {{answer.toChoose}}
+                                                </div>
+                                            </template>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="trueFalse"
+                                        v-for=" question in this.posts[0].doors[activeDoor].tureFalse.questions"
+                                        :class="{'active': question.active}">
+                                        <div class="hint" v-if="hint" @click="getHint(question)"></div>
+                                        <div class="pop_text inside" v-if="showPOpUpTextInside">
+                                            <p v-if="!questionHint  && !questionHintTitleShow">{{clickText}}</p>
+                                            <p v-if="questionHint && !questionHintTitleShow">{{question.hint}}</p>
+                                            <p v-if="questionHintTitleShow">{{questionHintText}}</p>
+                                        </div>
+                                        <div class="expand" @click="TogglePopup(question)"></div>
+                                        <div class="title">
+                                            <p>{{question.title}}</p>
+                                        </div>
+                                        <div class="questionTrueFalse">
+                                            <p>{{question.parag}}</p>
+                                        </div>
+                                        <div class="chooses">
+                                            <template v-for=" answer in question.answers">
+                                                <div class="answersTrueFalse"
+                                                    @click="checkTrueFalse($event, answer,question)"
+                                                    :class="{'correct': answer.answer  , 'false': answer.check && !answer.answer , 'true':answer.answer && solvedQuestion}">
+                                                    {{answer.toChoose}}
+                                                </div>
+                                            </template>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="select"
+                                        v-for=" question in this.posts[0].doors[activeDoor].selectText.questions"
+                                        :class="{'active': question.active}">
+                                        <div class="hint" v-if="hint" @click="getHint(question)"></div>
+                                        <div class="pop_text inside" v-if="showPOpUpTextInside">
+                                            <p v-if="!questionHint  && !questionHintTitleShow">{{clickText}}</p>
+                                            <p v-if="questionHint && !questionHintTitleShow">{{question.hint}}</p>
+                                            <p v-if="questionHintTitleShow">{{questionHintText}}</p>
+                                        </div>
+                                        <div class="expand-dim" @click="TogglePopup(question)"></div>
+                                        <div class="content">
+                                            <div class="title">
+                                                <p>{{question.title}}</p>
+                                            </div>
+                                            <div class="passage">
+                                                <templete v-if="!showSelected && !solvedQuestion">
+                                                    <p id="selectedtableText" ref="selectableText"
+                                                        @mouseup="SelectedText(question)"
+                                                        @selectstart="SelectedText($event)"
+                                                        @touchend="SelectedText($event)" v-html="question.sentence">
+                                                    </p>
+                                                </templete>
+                                                <templete v-if="showSelected && !solvedQuestion">
+                                                    <p ref="selectableText" v-html="question.correct">
+                                                    </p>
+                                                </templete>
+                                                <templete v-if="solvedQuestion">
+                                                    <!-- <p class="flex" ref="selectableText">
+                                                        <span v-for="word in wordsSelect"
+                                                            :class="{'showText': question.correctAnswer[0] == word ,'falseText': question.selectionText == word && question.selectionText != question.correctAnswer[0] , 'trueText':question.selectionText == word && question.selectionText == question.correctAnswer[0]}">{{word}}&nbsp;</span>
+                                                            
+                                                    </p> -->
+                                                    <p ref="selectableText" v-html="question.correct">
+                                                    </p>
+                                                </templete>
+                                            </div>
+                                        </div>
+                                        <div class="questionSelect">
+                                            <p>{{question.parag}}</p>
+                                            <div class="btn-select CheckSelectDim"
+                                                :class="{'active': selectionTextq != ''}"
+                                                @click="CheckSelect(question)">
+                                            </div>
+                                            <div class="btn-select removeSelectDim"
+                                                :class="{'active': selectionTextq != '' && removeSelectDone}"
+                                                @click="removeSelect()"></div>
+                                            <div class="btn-select showSelect" v-show="showAnswerSelect"
+                                                @click="showSelect()">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="punctuate"
+                                        v-for=" question in this.posts[0].doors[activeDoor].punctuate.questions"
+                                        :class="{'active': question.active}">
+                                        <div class="hint" v-if="hint" @click="getHintPun(question)"></div>
+
+                                        <div class="pop_text inside" v-if="showPOpUpTextInside">
+                                            <p v-if="!questionHint  && !questionHintTitleShow">{{clickText}}</p>
+                                            <p v-if="questionHint && !questionHintTitleShow">{{hintWorg}}</p>
+                                            <p v-if="questionHintTitleShow">{{questionHintText}}</p>
+                                        </div>
+                                        <div class="expand-dim" @click="TogglePopup(question)"></div>
+                                        <div class="content">
+                                            <div class="title">
+                                                <p>{{question.title}}</p>
+                                            </div>
+                                            <div class="question">
+                                                <template v-if="!solvedQuestion">
+                                                    <template v-for="(word,index) in wordsPunctuate">
+                                                        <template v-if="word.includes('/span>')">
+                                                            <div v-html="word">
+                                                            </div>
+                                                        </template>
+                                                        <template v-if="!word.includes('/span>')">
+                                                            <div @click="SelectWord(index,word,question)"
+                                                                :class="{'trueWord' : solvedStyle[index],'falseWord' : solvedStyle[index] == false , 'normal' : solvedStyle[index] == null}">
+                                                                {{word}}&nbsp;
+                                                                <div class="chooses"
+                                                                    v-if="indexChoose == index && showChoosesPunctuate">
+                                                                    <template v-for="choose in choosesPunctuate">
+                                                                        <div class="answer"
+                                                                            @click="checkPunctuate($event, choose,question)">
+                                                                            {{choose.toChoose}}
+                                                                        </div>
+                                                                    </template>
+
+                                                                </div>
+                                                            </div>
+                                                        </template>
+
+                                                    </template>
+                                                </template>
+
+                                                <template v-if="solvedQuestion">
+
+                                                    <template v-for="(word,index) in studentAnswer">
+                                                        <div style="margin-left: 0.5vw;"
+                                                            :class="{'trueWord' : solvedStyle[index],'falseWord' : solvedStyle[index] == false , 'normal' : solvedStyle[index] == null}" v-html="word + ' '">
+                                                            
+                                                        </div>
+
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </template>
+                                <template v-if="solvedQuestion">
+                                    <div class="button" :class="{'next':counter < 7 }" @click="nextQuestion()"></div>
+                                    <div class="button" :class="{'pre':counter > 1 , 'pre_dim' : counter == 1}"
+                                        @click="preQuestion()"></div>
+                                    <div class="button exit" v-if="counter >= 7" @click="home()"></div>
+                                </template>
+                                <!-- && !solvedQuestion -->
+                                <!-- <p v-if="endDoor[activeDoor]">{{endDoor[activeDoor]}}</p>-->
+                            </template>
+
+
+                        </div>
+                    </template>
+
+
+
+                </div>
+            </template>
+            <div class="instruction" v-show="startLo && instractionsView"> 
+                <div class="instructionBody">
+                    <div class="row" v-for="(instraction,index) in instractionsActive">
+                        <div class="image">
+                            <img :src="instraction.img" alt="" :class="instraction.class">
+                        </div>
+                        <div class="text">
+                            <p v-html="instraction.parag"></p>
+                        </div>
+                    </div>
+                    <div class="skip" @click="skip()"></div>
+                    <div class="next" :class="{'nextDim' : currentPage == 1}" @click="prev()"></div>
+                    <div class="prev" :class="{'prevDim' : pageSize*currentPage >= instractions.length}" @click="next()"></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../../../lib-native/madinet_elma3refa/assets/js/main.js"></script>
+</body>
+
+</html>

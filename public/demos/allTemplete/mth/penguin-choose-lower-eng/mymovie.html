@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Penguin</title>
+  <script src="../../../lib-native/penguin/assets/js/lottie-min.js"></script>
+  <script src="../../../lib-native/penguin/assets/js/vue.js"></script>
+  <link rel="stylesheet" href="../../../lib-native/penguin/assets/style/font.css">
+  <link rel="stylesheet" href="../../../lib-native/penguin/assets/style/style.css" />
+  <link rel="stylesheet" href="../../../lib-native/penguin/penguin-choose/style/style.css" />
+  <link rel="stylesheet" href="../../../lib-native/penguin/assets/style/images.css" />
+  <link rel="stylesheet" href="style/lo-style.css" />
+  <link rel='icon' href='../../../lib-native/penguin/assets/images/penguin/favicon.ico' type='image/x-icon' />
+  <script src="../../../js/submit_sender.js"></script>
+
+</head>
+
+<body>
+  <div class="Logo"></div>
+  <div id="penguin" data-urlpage="data" grade="1">
+    <div class="loader" v-show="!isSuccess || !isLoading"></div>
+
+    <div class="isSuccess" v-show=" isSuccess && isLoading">
+      <div class="main" v-show="!startLo">
+        <div>
+          <div class="startButton" @click="start()"></div>
+        </div>
+      </div>
+      <div class="digital-screen" v-show="startLo">
+        <div class="music" @click="muteMusic()" :class="{'play' : music ,'mute' : !music}">
+        </div>
+        <div class="information" @click="showInformation()" :class="{'none' : !infotmationClick}"></div>
+        <div class="overlay" id="overlay" :class="{'opened' : this.popupOpened}"></div>
+        <div class="popup" id="popup" v-show="this.popupOpened" :class="{'opened' : this.popupOpened}">
+          <div class="popup-content">
+            <span class="close" @click="closePopup()"></span>
+            <p class="text title">{{this.informationLO}}</p>
+          </div>
+        </div>
+        <div class="penguin" @click="setclick()" v-show="QustionStart">
+          <div class="border">
+            <template v-for="(items,index) in this.posts">
+              <template v-for="(item,index) in items.items">
+                <div class="question center ltr" :class="{'active': item.active}">
+                  <div class="type-question">
+                    <div class="container">
+                    
+                      <div class="flex">
+                        <div class="img">
+                          <img :src="item.img1">
+                        </div>
+                        <div class="chooses">
+                          <div class="choose bg" :class="{'true': (correctChoose == true && !upper) || (typeChoose == 'true' && upper)}">
+                            <template v-if="typeChoose == 'true'">
+                              <p class="text parag" style="color: white !important; " v-html="selectChoose"></p>
+                            </template>
+                            <template v-if="typeChoose == 'false' && !upper">
+                              <p class="text parag" style="color: white !important; " v-html="correctChooseText"></p>
+                            </template>
+                          </div>
+                        </div>
+                        <div class="img">
+                          <img :src="item.img2">
+                        </div>
+                      </div>
+                      <div class="chooses">
+                        <template v-for="choose in item.choose">
+                          <div class="choose" @click="checkChoose($event, choose)" style="pointer-events: auto;"
+                            :class="{'correct': choose.answer}">
+                            <p class="text parag" style="color: white !important; " v-html="choose.select"></p>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </template>
+
+          </div>
+          <div class="penguinCharacter">
+            <div id="penguinCharacter"></div>
+          </div>
+        </div>
+      </div>
+      <div v-show="question">
+        <div class="nextContent">
+          <div class="character" v-show="counter >= this.loQuestion">
+            <!-- height: 25vh; -->
+            <div class="progress" :class="{'stars': !this.upper}">
+              <div :class="{'eng':isEng}">
+                <div id="progressbar" v-show="this.upper" >
+                </div>
+              </div>
+              <div :class="{'eng':!isEng}">
+                <div id="stars" v-show="!this.upper">
+                </div>
+              </div>
+            </div>
+           
+            <div class="border">
+              <div class="type" v-if="this.upper"> {{Estimation}}</div>
+              <div class="penguin feedbackfalse" v-if=" 51 >= this.finalProgress"></div>
+              <div class="penguin feedbacktrue" v-if="this.finalProgress > 51"></div>
+            </div>
+            <div class="buttons">
+              <button class="reload" @click="reload()"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../js/finalProgress.js"></script>
+  <script src="../../../lib-native/penguin/penguin-choose/js/main.js"></script>
+  <script src="../../../lib-native/penguin/assets/js/animation.js"></script>
+</body>

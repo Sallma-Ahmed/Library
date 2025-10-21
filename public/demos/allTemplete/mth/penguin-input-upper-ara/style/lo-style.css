@@ -1,0 +1,24 @@
+.digital-screen .penguin .border .question {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.handEng {
+  left: -10vw;
+  top: 1vw;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}/*# sourceMappingURL=lo-style.css.map */

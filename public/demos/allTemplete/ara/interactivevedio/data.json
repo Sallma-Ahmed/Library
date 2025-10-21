@@ -1,0 +1,172 @@
+[{
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "BloomTargets": null,
+    "randomNumber": null,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "ara_5r_2a_01_02_02",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "SubType": "choose",
+    "title": "الفعل المضارع المرفوع",
+    "questions": [{
+            "id": 1,
+            "active": false,
+            "video": "./video/1.mp4",
+            "parag": "«<span>يخرُجُ</span> مُحمَّدٌ كُلَّ يَومٍ <span>يُمتِّعُ</span> نظرَه بالطبيعةِ، يرَى النهرَ الذي يجرِي ماؤُه فيسقِي الزرعَ، ويلقَى الأغنامَ التي ترعَى و<span>تشرَبُ</span> الماءَ، والأشجارَ التي تدنو ثـــــمارُهـــا و<span>تــميلُ</span> بــأغصــانِها، ف<span>يـــتوقَّــفُ</span> عنــــدَهـــا حتــــى مغيــــبِ الشمــــسِ».",
+            "quiz": [{
+                    "id": 1,
+                    "active": false,
+                    "numberOfTrial": 0,
+                    "questionlevel": "",
+                    "questionType": "text",
+                    "answersType": "text",
+                    "startTime": "",
+                    "endTime": "",
+                    "BloomLevel": 3,
+                    "numberOfquestion": 0,
+                    "correctCounter": 0,
+                    "question": "الأفعالُ المُلوَّنةُ في الفِقرةِ السابقةِ هل هي أفعال",
+                    "videoFalse": "./video/2.mp4",
+                    "trueExpersion": ["جميعُ الأفعالِ المُلوَّنةُ هي أفعالٌ مُضارِعةٌ،", "لأنَّها تبدَأُ بأحرفِ المُضارَعةِ، وتُعبِّرُ عن أفعالٍ ما زالَت تحدُثُ."],
+                    "falseExpersion": ["الأفعالُ المُلوَّنةُ في الفِقرةِ هي أفعالٌ مُضارِعةٌ،", "لأنَّها تبدَأُ بأحرفِ المُضارَعةِ، وتُعبِّرُ عن", "أفعالٍ ما زالَت تحدُثُ."],
+                    "type": 1,
+                    "correctAnswer": 2,
+                    "expressionTrue":"أحسَنت! الإجابةُ صحيحةٌ",
+                    "chooses": [{
+                            "number": 1,
+                            "word": "ماضيةٌ"
+                        },
+                        {
+                            "number": 2,
+                            "word": "مُضارِعةٌ"
+                        },
+                        {
+                            "number": 3,
+                            "word": "أمرٍ"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "active": false,
+                    "numberOfTrial": 0,
+                    "questionlevel": "",
+                    "questionType": "text",
+                    "answersType": "text",
+                    "startTime": "",
+                    "endTime": "",
+                    "BloomLevel": 3,
+                    "numberOfquestion": 0,
+                    "correctCounter": 0,
+                    "question": "ما الحركةُ الإعرابيَّةُ لهذه الأفعالِ المُضارِعةِ؟",
+                    "videoFalse": "./video/3.mp4",
+                    "trueExpersion": ["الأفعالُ المُضارِعةُ المرفوعةُ تحمِلُ الضمَّةَ ", "الظاهِرةَ على آخِرِها؛ كما في الأفعالِ المُلوَّنةِ في القِطعةِ."],
+                    "falseExpersion": ["الأفعالُ المُضارِعةُ المرفوعةُ علامةُ رفعِها الضمَّةُ ", "الظاهِرةُ على آخِرِها، لأنَّها أفعالٌ مُضارِعةٌ ", "غَيرُ مسبوقةٍ بأداةِ نصبٍ أو جزمٍ."],
+                    "type": 1,
+                    "expressionTrue":"إجابةٌ صحيحةٌ! ",
+                    "correctAnswer": 2,
+                    "chooses": [{
+                            "number": 1,
+                            "word": "الفتحةُ"
+                        },
+                        {
+                            "number": 2,
+                            "word": "الضمةُ"
+                        },
+                        {
+                            "number": 3,
+                            "word": "الكسرةُ"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "active": false,
+            "video": "./video/4.mp4",
+            "parag": "«يخرُجُ مُحمَّدٌ كُلَّ يَومٍ يُمتِّعُ نظرَه بالطبيعةِ، <span>يرَى</span> النهرَ الذي <span>يجرِي</span> ماؤُه ف<span>يسقِي</span> الزرعَ، و<span>يلقَى</span> الأغنامَ التي <span>ترعَى</span> وتشرَبُ الماءَ، والأشجارَ التي <span>تدنو</span> ثـــــمارُهـــا وتــميلُ بــأغصــانِها، فيـــتوقَّــفُ عنــــدَهـــا حتــــى مغيــــبِ الشمــــسِ».",
+            "quiz": [{
+                    "id": 3,
+                    "active": false,
+                    "numberOfTrial": 0,
+                    "questionlevel": "",
+                    "questionType": "text",
+                    "answersType": "text",
+                    "startTime": "",
+                    "endTime": "",
+                    "BloomLevel": 3,
+                    "numberOfquestion": 0,
+                    "correctCounter": 0,
+                    "question": "الحرفُ الأخيرُ في الأفعالِ المُلوَّنةِ ...",
+                    "videoFalse": "./video/5.mp4",
+                    "trueExpersion": ["الأفعالُ المُلوَّنةُ تنتَهِي", "بحروفِ عِلَّةٍ (الألفِ، أوِ الواوِ، أوِ الياءِ)، ", "ما يجعَلُها أفعالًا مُعتلَّةَ الآخِرِ."],
+                    "falseExpersion": ["فإنَّ الفعلَ المُضارِعَ المُعتَلَّ الآخِرِ ينتَهِي ", "بحرفِ عِلَّةٍ (الألفِ، أوِ الواوِ، أوِ الياءِ)."],
+                    "type": 1,
+                    "correctAnswer": 2,
+                    "expressionTrue":"أحسَنت! الإجابةُ صحيحةٌ",
+
+                    "chooses": [{
+                            "number": 1,
+                            "word": "صحيحٌ"
+                        },
+                        {
+                            "number": 2,
+                            "word": "معتلٌّ"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "active": false,
+                    "numberOfTrial": 0,
+                    "questionlevel": "",
+                    "questionType": "text",
+                    "answersType": "text",
+                    "startTime": "",
+                    "endTime": "",
+                    "BloomLevel": 3,
+                    "numberOfquestion": 0,
+                    "correctCounter": 0,
+                    "question": "هل ظهَرَت حركةُ الرفعِ على آخِرِ الأفعالِ المُلوَّنةِ؟",
+                    "videoFalse": "./video/6.mp4",
+                    "trueExpersion": ["فالأفعالُ المُعتَلَّةُ الآخِرِ لا تظهَرُ علَيها حركةُ الرفعِ."],
+                    "falseExpersion": ["فالفعلُ المُضارِعُ المُعتَلُّ الآخِرِ لا تظهَرُ عليه حركةُ الرفعِ."],
+                    "type": 1,
+                    "correctAnswer": 2,
+                    "expressionTrue":"إجابةٌ صحيحةٌٌ، ",
+                    "chooses": [{
+                            "number": 1,
+                            "word": "نعم"
+                        },
+                        {
+                            "number": 2,
+                            "word": "لا"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "active": false,
+            "video": "./video/7.mp4",
+            "parag": "",
+            "quiz": [
+
+            ]
+        }
+    ]
+}]

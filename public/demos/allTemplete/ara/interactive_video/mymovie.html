@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Bitmovin Interactive Markers</title>
+  <script src="../../../lib-native/interactive_video/assets/script/vue.global.prod.js"></script>
+  <script src="../../../lib-native/interactive_video/assets/script/bitmovinplayer.js"></script>
+  <script src="../../../lib-native/interactive_video/assets/script/bitmovinplayer-ui.js"></script>
+  <script src="../../../lib-native/interactive_video/assets/js/lottie-min.js"></script>
+  <script src="../../../js/submit_sender.js"></script>
+  <link href="../../../lib-native/interactive_video/assets/script/bitmovinplayer-ui.css" rel="stylesheet" />
+  <link href="https://cdn.bitmovin.com/player/web/8/bitmovinplayer.css" rel="stylesheet" />
+  <!-- <link href="./style/lo-style.css" rel="stylesheet" /> -->
+  <link href="./style/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app" data-urlpage="data">
+    <div class="loader" v-show="!isSuccess || !isLoading"></div>
+    <div id="player" v-show=" isSuccess && isLoading"></div>
+    <div id="interaction" class="container">
+
+      <div class="isSuccess" id="loQuestions">
+        <div id="Timer"></div>
+
+        <template v-if="this.quizvideo && activeQuestion.quiz[quizCounter].type == 1 ">
+
+          <div class="questions" v-for="quiz in activeQuestion.quiz" :class="{'active': quiz.active}">
+            <div class="title">
+              <p>{{activeQuestion.title}}</p>
+            </div>
+            <div class="parag">
+              <p v-html="activeQuestion.parag"></p>
+            </div>
+            <div class="quiz">
+              <div class="question">
+                <p>{{quiz.question}}</p>
+              </div>
+              <div class="chooses">
+                <div class="choose" :class="{[quiz.add_style]: quiz.selectedChooseIndex === i}"
+                  v-for="(choose,i) in quiz.chooses" @click="chooseQuestion(choose,$event,quiz,i)">
+                  <p>{{choose.word}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        <template v-if="this.quizvideo && activeQuestion.quiz[quizCounter].type == 2 ">
+          <div class="select questions" v-for="quiz in activeQuestion.quiz" :class="{'active': quiz.active}">
+            <div class="title">
+              <p>{{quiz.title}}</p>
+            </div>
+            <div class="quiz">
+              <div class="question">
+                <templete v-if="!showSelected && !solvedQuestion">
+                  <p id="selectedtableText" ref="selectableText" @mouseup="SelectedText(quiz)"
+                    @selectstart="SelectedText($event)" @touchend="SelectedText($event)" v-html="quiz.sentence">
+                  </p>
+                </templete>
+                <templete v-if="showSelected && !solvedQuestion">
+                  <p ref="selectableText" v-html="quiz.correct">
+                  </p>
+                </templete>
+                <templete v-if="solvedQuestion">
+                  <p ref="selectableText" v-html="quiz.correct">
+                  </p>
+                </templete>
+              </div>
+            </div>
+
+            <div class="questionSelect">
+              <p class="questionParag">{{quiz.parag}}</p>
+              <div class="option-btn">
+                <div class="btn-select CheckSelectDim" :class="{'active': selectionTextq != ''}"
+                  @click="CheckSelect(quiz)">
+                  <p>CheckSelectDim</p>
+                </div>
+
+                <div class="btn-select removeSelectDim" :class="{'active': selectionTextq != '' && removeSelectDone}"
+                  @click="removeSelect()">
+                  <p>removeSelectDim</p>
+                </div>
+                <!-- <div class="btn-select showSelect" v-show="showAnswerSelect" @click="showSelect()">
+                  <p>showSelect</p>
+                </div> -->
+              </div>
+            </div>
+
+          </div>
+        </template>
+
+
+        <div v-if="this.quizvideo && activeQuestion.quiz[quizCounter].type == 3 "
+          :id="activeQuestion.quiz[quizCounter].type_drag">
+          <div class="container">
+            <div id="card-dragg">
+              <div class="draggable" v-for="(question,index) in shuffledDrag" :id="index" :index="question.number"
+                draggable="true" @dragstart="dragstart($event)" @drag="drag($event)" @dragend="dragend($event)"
+                @touchstart="touchStart($event)" @touchmove="touchMove($event)" @touchend="touchEnd($event)"
+                :style="{ position: 'relative', left: question.left + 'px', top: question.top + 'px' }">
+                {{question.word}}
+              </div>
+            </div>
+            <div id="card-dropp">
+              <div v-for="(question,index) in  shuffledQuestion">
+                <div class="textindex">
+                  <span class="icon-index">{{index+1}}</span>
+                  <div class="question">
+                    <div class="dragQ">
+                      <template v-for="(text,index) in question.texts">
+                        <p class="paragraphe" v-for="parag in text.text">{{parag}}</p>
+                        <div v-if="index < question.drag.length" :id="question.drag[index].number"
+                          :index="question.drag[index].number" class="droppable" @drop="drop($event)"
+                          @dragover="dragover($event)" @touchstart.prevent @touchmove.prevent></div>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="finished hide">
+            </div> -->
+          </div>
+        </div>
+
+        <div class="feedback" v-if="this.quizvideo && feedback">
+          <div class="borderFeedBack">
+            <div class="answer">
+              <p :class="{'true': expression,'false': !expression}">{{expressText}}</p>
+            </div>
+            <div class="details">
+              <p v-for="parag in expressionParag">{{parag}}</p>
+            </div>
+            <div class="reload" @click="reload()"></div>
+            <div class="next" @click="next()" :class="{'dimmed': !expression}"></div>
+          </div>
+        </div>
+        <!-- <p style="font-size: 20px">❓ ماذا تريد أن تفعل؟</p>
+        <button @click="handleChoice('restart')">🔁 إعادة الفيديو</button>
+        <button @click="handleChoice('goto1')">⏩ الانتقال إلى 1:30</button>
+        <button @click="handleChoice('goto2')">⏩ الانتقال إلى 3:00</button>
+        <button @click="handleChoice('continue')">▶️ متابعة المشاهدة</button> -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../../../lib-native/interactive_video/assets/js/script.js"></script>
+</body>
+
+</html>

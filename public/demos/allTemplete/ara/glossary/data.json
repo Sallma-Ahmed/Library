@@ -1,0 +1,226 @@
+[{
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "BloomTargets": null,
+    "randomNumber": null,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "ara_5r_2a_01_02_02",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "SubType":"DragDrop",
+    "items":[
+      {
+        "item":"mean",
+        "check":false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words":[
+          
+        {
+            "theword": "مُجَابَهَة",
+            "answer": "الْمُرَادُ: مُنَافَسَة"
+        }, {
+            "theword": "تُعَزِّز",
+            "answer": "تُقَوِّي"
+        }, {
+            "theword": "التَّعَرُّض لِـ",
+            "answer": "الِاطِّلَاع عَلَى"
+        }, {
+            "theword": "الزَّاخِرَة",
+            "answer": "الْمَلِيئَة"
+        }, {
+            "theword": "الحَرَم",
+            "answer": "الْمُرَادُ: الْمَبْنَى الْمَدْرَسِيّ"
+        }, {
+            "theword": "آفَاق",
+            "answer": "الْمُرَادُ: الْمَعَارِف وَالْأَفْكَار"
+        }, {
+            "theword": "مَيْدَانًا",
+            "answer": "سَاحَة"
+        }, {
+            "theword": "نَتَعَمَّق",
+            "answer": "نَتَوَسَّع"
+        }, {
+            "theword": "الِانْجِرَاف",
+            "answer": "الِانْدِفَاع"
+        }
+        ]
+      },
+      {
+        "item":"reverse",
+        "check":false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words":[
+            {
+                "theword": "يَتَوَالَى",
+                "answer": "يَنْقَطِع"
+            },
+            {
+                "theword": "فَاسِدَة",
+                "answer": "صَالِحَة"
+            },
+            {
+                "theword": "مُطْلَقَة",
+                "answer": "مَحْدُودَة/ مُقَيَّدَة"
+            },
+            {
+                "theword": "غَرِيبًا",
+                "answer": "مَأْلُوفًا"
+            },
+            {
+                "theword": "شَكَرْتُ",
+                "answer": "جَحَدْتُ"
+            },
+            {
+                "theword": "مُبْتَسِمًا",
+                "answer": "عَابِسًا"
+            },
+            {
+                "theword": "مُخَالَفَة",
+                "answer": "مُوَافَقَة/ اتِّبَاع"
+            },
+            {
+                "theword": "الْمُوبِقَات",
+                "answer": "الطَّاعَات"
+            },
+            {
+                "theword":"يَمْنَحكَ",
+                "answer": "يَمْنَعكَ"
+            },
+            {
+                "theword": "تَرَكْتُهُ",
+                "answer":"لَازَمْتُهُ"
+            },
+            {
+                "theword": "تَسْتَقِيم",
+                "answer": "تَنْحَرِف"
+            },
+            {
+                "theword": "السَّلِيمَة",
+                "answer": "الْفَاسِدَة"
+            },
+            {
+                "theword": "يُمَكِّـنكَ",
+                "answer": "يُعَوِّقكَ"
+            },
+            {
+                "theword": "يَدُلّكَ",
+                "answer": "يُضِلّكَ"
+            },
+            {
+                "theword": "يَتَعَارَض",
+                "answer": "يَتَوَافَق"
+            }
+        ]
+      },
+      {
+        "item":"plural",
+        "check":false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words":[
+            {
+                "theword": "ذَكَر",
+                "answer": "ذُكُور"
+            },
+            {
+                "theword": "غَابَة",
+                "answer": "غَابَات/ غَاب"
+            },
+            {
+                "theword": "الْمَطَر",
+                "answer": "الْأَمْطَار"
+            },
+            {
+                "theword": "أُنْثَى",
+                "answer": "إِنَاث"
+            },
+            {
+                "theword": "قَوْس",
+                "answer": "أَقْوَاس"
+            },
+            {
+                "theword": "الْفَرْق",
+                "answer": "الْفُرُوق"
+            },
+            {
+                "theword": "فِطْرَة",
+                "answer": "فِطَر"
+            },
+            {
+                "theword": "ظَاهِرَة",
+                "answer": "ظَوَاهِر"
+            },
+            {
+                "theword": "شَرْح",
+                "answer": "شُرُوح"
+            }
+        ]
+      },
+      {
+        "item":"single",
+        "check":false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words":[
+            {
+                "theword": "أَزْيَاء",
+                "answer": "زِيّ"
+            },
+            {
+                "theword": "ضَوَابِط",
+                "answer": "ضَابِط"
+            },
+            {
+                "theword": "النِّسَاء",
+                "answer": "الْمَرْأَة"
+            },
+            {
+                "theword": "الْمُوبِقَات",
+                "answer": "الْمُوبِقَة"
+            },
+            {
+                "theword": "الشَّرَائِع",
+                "answer": "الشَّرِيعَة"
+            },
+            {
+                "theword": "أَشِعَّة",
+                "answer": "شُعَاع"
+            }
+        ]
+      }
+   
+    ]
+
+    
+    
+  } ]

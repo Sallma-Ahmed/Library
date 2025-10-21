@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='../../../lib-native/digital-screen/assets/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/digital-screen/assets/style/digital-screen.css">
+    <link rel="stylesheet" href="../../../lib-native/digital-screen/assets/style/font.css">
+    <link rel="stylesheet" href="./style/lo-style.css">
+    <script src="../../../lib-native/digital-screen/assets/js/lottie-min.js"></script>
+    <script src="../../../lib-native/digital-screen/assets/js/vue.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+    <title>Digital Screen</title>
+
+</head>
+
+<body>
+    <div class="main" id="digital-screen" data-urlpage="data">
+        <div class="loader" v-show="!isSuccess || !isLoading"></div>
+
+        <div class="isSuccess" v-show=" isSuccess && isLoading">
+            <div v-show="!startLo">
+                <div class="start-button" @click="start()"></div>
+            </div>
+            <div class="logo"></div>
+            <div class="transition">
+                <div class="pic_left "></div>
+                <div class="pic_right "></div>
+            </div>
+            <div class="zoki" v-show="startLo">
+                <div class="music" @click="muteMusic()" :class="bgMusic ? 'play' : 'mute'"></div>
+                <template v-if="this.posts.length !=0 ">
+                    <div class="information" @click="showInformation()" :class="{'none' : !infotmationClick}"></div>
+                    <div class="overlay" id="overlay"></div>
+                    <div class="popup" id="popup">
+                        <div class="popup-content">
+                            <span class="close" @click="closePopup()"> </span>
+                            <p v-for="p in this.posts[0].informationLO" v-html="p"></p>
+                        </div>
+                    </div>
+                </template>
+                <div class="zoki-charecter" id="zokicharecter" v-show="!question">
+                </div>
+
+                <div class="screen-question">
+
+                    <div class="screen">
+                        <div class="check-button" @click="checkanswer()">
+                            <div class="check hand " v-if="this.counter == 0"></div>
+
+                        </div>
+                        <div class="display-answer-button " @click="showAnswer()">
+                            <div class="display-answer hand" v-if="this.counter == 0"></div>
+                        </div>
+                       
+
+                        <div class="finished" v-show="!question && feedback">
+                            <div id="robots">
+                            </div>
+                        </div>
+
+
+                        <template v-if="this.posts.length!=0">
+                            <div class="question" v-for="(item, index) in this.posts[0].items"
+                                :class="{'active': item.active}">
+                                <div class="content" v-if="!feedback" :class="{'ltr': upper || (!upper && isEng) }">
+                                    <p>{{item.title}}</p>
+                                    <div class="break"></div>
+                                    <template v-for="(input, i) in item.inputs[0].numOfInput">
+                                        <input type="text" class="input emptyInput" index="0" :indexInput="i"
+                                            @change="changeValue();" @click="clickInput()" maxlength="1"
+                                            @keyup="maxLength($event,i)">
+                                    </template>
+                                    <template v-for="(input, i) in item.inputs[1].numOfInput">
+                                        <input type="text" class="input emptyInput" index="1" :indexInput="i"
+                                            @change="changeValue();" @click="clickInput()" maxlength="1"
+                                            @keyup="maxLength($event,i)">
+                                    </template>
+                                    <template v-for="(input, i) in item.inputs[2].numOfInput">
+                                        <input type="text" class="input emptyInput" index="2" :indexInput="i"
+                                            @change="changeValue();" @click="clickInput()" maxlength="1"
+                                            @keyup="maxLength($event,i)">
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div v-show="question">
+                    <div class="nextContent">
+                        <div class="character show">
+
+                            <div class="progress" v-show="counter === loQuestions" >
+                                <div id="progressbar">
+                                </div>
+                                <div id="stars"></div>
+                            </div>
+                            <p class="grade" v-show="counter === loQuestions">{{Estimation}}</p>
+                            <div class="animation">
+                                <div id="zokisad" v-show=" 51 >= this.finalProgress && counter == loQuestions">
+                                </div>
+                                <div id="zokihappy" v-show="this.finalProgress > 51 && counter == loQuestions">
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button class="home" @click="home()"></button>
+                                <!-- <button class="next" @click="nextQuestion()"
+                                    v-show="counter !== loQuestions-1"></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../../js/input.js"></script>
+    <script src="../../../js/finalProgress.js"></script>
+    <script src="../../../lib-native/digital-screen/digital-screen-input/js/zoki.js"></script>
+    <script src="../../../lib-native/digital-screen/assets/js/animation.js"></script>
+</body>
+
+</html>

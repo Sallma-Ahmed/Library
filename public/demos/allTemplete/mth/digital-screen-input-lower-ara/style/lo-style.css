@@ -1,0 +1,16 @@
+.ltr {
+  direction: ltr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.handEng {
+  bottom: 1vh;
+  left: -16vh;
+}/*# sourceMappingURL=lo-style.css.map */

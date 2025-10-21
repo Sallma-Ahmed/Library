@@ -1,0 +1,87 @@
+[
+  {
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "loTargets": null,
+    "id": "mth_5r_2a_01_03_05",
+    "SubType": "Input",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "numberOfquestion": 1,
+    "hint": true,
+    "questionAudio": true,
+    "upper": false,
+    "isEng": false,
+    "arrayanswer": null,
+    "informationLO": [".أكمل بكتابة الناتج الصحيح "],
+    "video":"video/mth_1r_2a_05_02_05.mp4",
+
+    "items": [
+      {
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "type": 1,
+        "text1": "7",
+        "text2": "3",
+        "text3": "8",
+        "text4": "17",
+        "text5": "5",
+        "text6": "16",
+        "text7": "14",
+        "text8": "11",
+        "title": "",
+        "inputs": [
+          {
+            "numOfInput": 1,
+            "valid": ["-4", "- 4"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["+5","+ 5"]          },
+          {
+            "numOfInput": 1,
+            "valid": ["+9","+ 9"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["-6","- 6"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["-11","- 11"]          },
+          {
+            "numOfInput": 1,
+            "valid": ["+2","+ 2"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["+3","+ 3"]
+          }
+        ]
+      }
+    ]
+  }
+]

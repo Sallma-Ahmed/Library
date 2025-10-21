@@ -1,0 +1,227 @@
+[
+  {
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "BloomTargets": null,
+    "randomNumber": null,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "ara_5r_2a_01_02_02",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "SubType": "DragDrop",
+    "items": [
+      {
+        "item": "mean",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "الظَّلْمَاء",
+            "answer": "الظُّلْمَة"
+          },
+          {
+            "theword": "وَخِيمَة",
+            "answer": "سَيِّئَة"
+          },
+          {
+            "theword": "تَتَشَبَّث",
+            "answer": "تَتَمَسَّك"
+          },
+          {
+            "theword": "التَّغَافُل",
+            "answer": "تَعَمُّد النِّسْيَانِ"
+          },
+          {
+            "theword": "مُرُور الْكِرَام",
+            "answer": "الْمُرَاد: دُونَ اهْتمَامٍ"
+          },
+          {
+            "theword": "الْحَمِيدَة",
+            "answer": "الْمُرَاد: الطَّيِّبَة"
+          },
+          {
+            "theword": "عَوَاقِبهَا",
+            "answer": "نِهَايَاتهَا/ نَتَائِجهَا"
+          },
+          {
+            "theword": "شَائِعَات",
+            "answer": "أَخْبَار غَيْر مُؤَكَّدَة"
+          },
+          {
+            "theword": "خَاضِعًا",
+            "answer": "ذَلِيلًا"
+          },
+          {
+            "theword": "عَوَاقِبهَا",
+            "answer": "نِهَايَاتهَا/ نَتَائِجهَا"
+          },
+          {
+            "theword": "شَائِعَات",
+            "answer": "أَخْبَار غَيْر مُؤَكَّدَة"
+          },
+          {
+            "theword": "خَاضِعًا",
+            "answer": "ذَلِيلًا"
+          },
+          {
+            "theword": "عَوَاقِبهَا",
+            "answer": "نِهَايَاتهَا/ نَتَائِجهَا"
+          },
+          {
+            "theword": "شَائِعَات",
+            "answer": "أَخْبَار غَيْر مُؤَكَّدَة"
+          },
+          {
+            "theword": "خَاضِعًا",
+            "answer": "ذَلِيلًا"
+          },
+          {
+            "theword": "عَوَاقِبهَا",
+            "answer": "نِهَايَاتهَا/ نَتَائِجهَا"
+          },
+          {
+            "theword": "شَائِعَات",
+            "answer": "أَخْبَار غَيْر مُؤَكَّدَة"
+          },
+          {
+            "theword": "خَاضِعًا",
+            "answer": "ذَلِيلًا"
+          }
+        ]
+      },
+      {
+        "item": "reverse",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "التَّهَاوُن",
+            "answer": "الِاهْتِمَام"
+          },
+          {
+            "theword": "الثَّمِين",
+            "answer": "الرَّخِيص"
+          },
+          {
+            "theword": "التَّغَافُل",
+            "answer": "الِانْتِبَاه"
+          },
+          {
+            "theword": "الِاسْتِرْخَاء",
+            "answer": "الْإِرْهَاق"
+          },
+          {
+            "theword": "إِهْدَار",
+            "answer": "حِفَاظ عَلَى"
+          },
+          {
+            "theword": "الْحَكِيم",
+            "answer": "الْأَحْمَق"
+          }
+        ]
+      },
+      {
+        "item": "plural",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "الْكَرِيم",
+            "answer": "الْكِرَام/ الْكُرَمَاء"
+          },
+          {
+            "theword": "حَكِيم",
+            "answer": "حُكَمَاء"
+          },
+          {
+            "theword": "الدَّافِع",
+            "answer": "الدَّوَافِع"
+          },
+          {
+            "theword": "شَأْن",
+            "answer": "شُئُون"
+          },
+          {
+            "theword": "الْعَصَب",
+            "answer": "الْأَعْصَاب"
+          },
+          {
+            "theword": "قِيمَة",
+            "answer": "قِيَم"
+          }
+        ]
+      },
+      {
+        "item": "single",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "مَوَاقِف",
+            "answer": "مَوْقِف"
+          },
+          {
+            "theword": "أَحْلَام",
+            "answer": "حُلْم"
+          },
+          {
+            "theword": "آمَال",
+            "answer": "أَمَل"
+          },
+          {
+            "theword": "الْكِرَام",
+            "answer": "الْكَرِيم"
+          },
+          {
+            "theword": "شَائِعَات",
+            "answer": "شَائِعَة"
+          },
+          {
+            "theword": "مِنَصَّات",
+            "answer": "مِنَصَّة"
+          },
+          {
+            "theword": "أَهْدَاف",
+            "answer": "هَدَف"
+          },
+          {
+            "theword": "الْآرَاء",
+            "answer": "الرَّأْي"
+          }
+        ]
+      }
+    ]
+  }
+]

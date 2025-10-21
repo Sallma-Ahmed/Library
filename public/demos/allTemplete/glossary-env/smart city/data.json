@@ -1,0 +1,207 @@
+[
+  {
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "BloomTargets": null,
+    "randomNumber": null,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "ara_5r_2a_01_02_02",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "SubType": "DragDrop",
+    "items": [
+      {
+        "item": "mean",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "لَدَيْه",
+            "answer": "عِنْدَه"
+          },
+          {
+            "theword": "مَاهِرًا",
+            "answer": "بَارِعًا"
+          },
+          {
+            "theword": "عَبْقَرِيًّا",
+            "answer": "شَدِيد الذَّكَاءِ "
+          },
+          {
+            "theword": "بِجِدّ",
+            "answer": "بِاجْتِهَاد"
+          },
+          {
+            "theword": "نُوَاجِه",
+            "answer": "نُوَاجِه"
+          },
+          {
+            "theword": "نُوَاجِه",
+            "answer": "نَخْضَع / نَنْقَاد "
+          }
+        ]
+      },
+      {
+        "item": "reverse",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "عَبْقَرِيًّا",
+            "answer": "أَحْمَق"
+          },
+          {
+            "theword": "مَشْهُورًا",
+            "answer": "مَجْهُولًا / مَغْمُورًا"
+          },
+          {
+            "theword": "تَعْرِفُونَ",
+            "answer": "تَجْهَلُونَ "
+          },
+          {
+            "theword": "وَاضِح",
+            "answer": "خَفِيّ / غَامِض"
+          },
+          {
+            "theword": "جَدِيدَة",
+            "answer": "قَدِيمَة"
+          },
+          {
+            "theword": "صُعُوبَات",
+            "answer": "تَسْهِيلَات"
+          },
+          {
+            "theword": "نَسْتَسْلِم ",
+            "answer": "نُقَاوِم "
+          },
+          {
+            "theword": "انْتَبِهُوا",
+            "answer": "اغْفَلُوا "
+          },
+          {
+            "theword": "الْجُلُوس",
+            "answer": "الْقِيَام / النُّهُوض"
+          },
+          {
+            "theword": "الِاجْتِهَاد",
+            "answer": "الْكَسَل"
+          },
+          {
+            "theword": "بَدَأْتُم",
+            "answer": "انْتَهَيْتُم"
+          },
+          {
+            "theword": "تَقْتَرِبُونَ",
+            "answer": "تَبْتَعِدُونَ"
+          }
+        ]
+      },
+      {
+        "item": "plural",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "طَبِيب",
+            "answer": "أَطِبَّاء"
+          },
+          {
+            "theword": "مُهَنْدِسًا ",
+            "answer": "مُهَنْدِسِينَ"
+          },
+          {
+            "theword": "بَطَلًا",
+            "answer": "أَبْطَالًا"
+          },
+          {
+            "theword": "فَنَّانًا",
+            "answer": "فَنَّانِينَ"
+          },
+          {
+            "theword": "فِكْرَة",
+            "answer": "فِكَر"
+          },
+          {
+            "theword": "شَكْل",
+            "answer": "أَشْكَال"
+          },
+          {
+            "theword": "الدِّرَاسَة",
+            "answer": "الدِّرَاسَات"
+          },
+          {
+            "theword": "مَهَارَة",
+            "answer": "مَهَارَات"
+          },
+          {
+            "theword": "وَقْت ",
+            "answer": "أَوْقَات"
+          },
+          {
+            "theword": "الطَّرِيق ",
+            "answer": "الطُّرُق"
+          },
+          {
+            "theword": "خُطَّة ",
+            "answer": "خُطَط"
+          },
+          {
+            "theword": "خُطْوَة ",
+            "answer": "خُطْوَات / خُطًى"
+          }
+        ]
+      },
+      {
+        "item": "single",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "أَصْدِقَاء",
+            "answer": "صَدِيق"
+          },
+          {
+            "theword": "مُتَفَوِّقِينَ",
+            "answer": "مُتَفَوِّقًا"
+          },
+          {
+            "theword": "صُعُوبَات ",
+            "answer": "صُعُوبَة"
+          }
+        ]
+      }
+    ]
+  }
+]

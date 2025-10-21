@@ -1,0 +1,103 @@
+.templates-cards {
+  width:28%;
+  background-color: #d9f5ff;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1%;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.templates-cards img {
+  width: 100%;
+  height: 35vh;
+  border-radius: 20px;
+
+}
+
+.template-subject {
+  background-color: #010C30;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.template-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.template-name h3 {
+    font-size: 2vw;
+    font-weight: 900;
+  color: #001e3c;
+  text-decoration: none;
+}
+
+.name-input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px 6px;
+  width: 70%;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.creator-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.by-text {
+  font-size: 10px;
+  color: gray;
+  text-decoration: none;
+}
+
+.creator-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #001e3c;
+}
+.arrow-btn
+
+{
+    
+ 
+    display: inline-block;
+    background-image: url(/images/btn-dark.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.5vh 2vh;
+    border: none;
+    border-radius: 1vh;
+    width: 4%;
+    height: 36%;
+}

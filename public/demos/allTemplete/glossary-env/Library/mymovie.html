@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href='../../../lib-native/glossary/assets/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/glossary/assets/style/lo-style.css">
+    <link rel="stylesheet" href="../../../lib-native/glossary/assets/environment/library/images.css">
+    <script src="../../../lib-native/glossary/assets/js/lottie-min.js"></script>
+    <script src="../../../lib-native/glossary/assets/js/vue.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+
+    <title></title>
+</head>
+
+<body>
+    <div class="container" id="glossary" data-urlpage="data">
+        <div class="mute-music" :class="{'music': playMusic}" @click="musicToggle()" v-show=" isSuccess && isLoading"></div>
+        <div class="logo" v-show=" isSuccess && isLoading"></div>
+        <div class="content" id="glossaryContent"
+            :class="{'getOpen': isActive , 'fullscreen':  !this.isSuccess || !this.isLoading}">
+            <div class="loader" v-show="!isSuccess || !isLoading"></div>
+            <div class="isSuccess" v-show=" isSuccess && isLoading">
+
+                <div class="startPage" :class="{'opened': isActive }" >
+                    <div class="gates" v-for="gate in this.gates" @click="openTable(gate)"
+                        :class="[gate.classname, { 'active': gate.active }]">
+                        <p>{{gate.name}}</p>
+                    </div>
+                </div>
+                <div class="data" >
+                    <div class="contentData">
+                        <div class="group">
+                            <div class="box">
+                                <div class="innerBOX drop" >
+                                    <div class="boxAnmation">
+                                        <div id="boxAnmation"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="words" :class="{'poniterNone' : poniterNone}">
+                                <div class="word" draggable="true" @dragstart="dragstart($event,word)"  :index="index+ (currentPage * pageSize)" :class="{'activeColor': activeText == index+ (currentPage * pageSize)}"
+                                    @drag="drag($event)" @dragend="dragend($event,index)"
+                                    @touchstart="touchstart($event,word)" @touchmove="touchmove($event)"
+                                    @touchend="touchend($event,index)" v-for="(word , index) in wordsActive"
+                                    :style="{ position: 'relative', left: word.left + 'px', top: word.top + 'px' }">
+                                    <p>{{word.theword}}</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="slide next" :class="{'nextDim' : pageSize*currentPage >= words.length,'poniterNone' : poniterNone}"
+                            @click="next()">
+                        </div>
+                        <div class="slide prev" :class="{'prevDim' : currentPage == 1,'poniterNone' : poniterNone}" @click="prev()"></div>
+                        <div class="back" @click="backHome">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../lib-native/glossary/assets/js/main.js"></script>
+    <script src="../../../lib-native/glossary/assets/js/animation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../lib-native/conversation/js/vue.js"></script>
+    <script src="../../../lib-native/interactive_video/assets/script/bitmovinplayer.js"></script>
+    <script src="../../../lib-native/interactive_video/assets/script/bitmovinplayer-ui.js"></script>
+    <link href="../../../lib-native/interactive_video/assets/script/bitmovinplayer-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../lib-native/conversation/style/lo.css">
+    <script src="../../../js/submit_sender.js"></script>
+    <link href="https://cdn.bitmovin.com/player/web/8/bitmovinplayer.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="main" id="conversation" data-urlpage="data">
+        <!-- <div class="loader" v-show="!isSuccess || !isLoaded"></div> -->
+        <div class="aspect-box" id="container" :class="{'vedioBg':startLo && !vedioPlay,'questionBg':questionsStart}">
+            <template v-show="isSuccess && isLoading">
+                <div class="safe-area" id="safeArea">
+                    <div class="logo" v-show="!startLo || !vedioPlay"></div>
+                    <div class="vedioIcon" v-if="startLo && !vedioPlay && questionsStart"></div>
+                    <div class="information" v-if="startLo && !vedioPlay && questionsStart"></div>
+                    <div class="progress" v-if="startLo && !vedioPlay && questionsStart">
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                        <div class="tab dimmed"></div>
+                    </div>
+                    <div class="start-lo" v-show="!startLo && !vedioPlay && !questionsStart" @click="startButton()">
+                    </div>
+                    <div class="vedio-container" id="vedio-container" v-show="startLo && vedioPlay && !questionsStart">
+                        <div class="close" @click="closeVedio()"></div>
+                        <div id="player">
+                            <div class="buttons">
+                                <div class="btn prev" @click="rewindVideo"></div>
+                                <div class="btn play" :class="{'pause': isPlaying}" @click="togglePlayPause">
+                                </div>
+                                <div class="btn next" @click="forwardVideo"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <template v-if="startLo && !vedioPlay && questionsStart">
+                        <div class="content" v-for="question in this.posts[0]?.questions"
+                            :class="{'active' : question.active}">
+                            <div class="conversation">
+                                <div class="music"></div>
+                                <p v-for="parag in question.conversation">{{parag}}</p>
+                            </div>
+                            <div class="question">
+                                <div class="music"></div>
+                                <p v-for="parag in question.text1">{{parag}}</p>
+                                <div class="pointChoose" @click="getChooses()">......
+                                </div>
+                                <p v-for="parag in question.text2">{{parag}}</p>
+                                <div class="chooses" v-if="showChooses">
+                                    <template v-for="choose in question.choose">
+                                        <div class="choose" @click="checkChoose($event, choose)"
+                                            style="pointer-events: auto;" :class="{'correct': choose.answer}">
+                                            <p class="text parag" v-html="choose.select"></p>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+    <script src="../../../js/choose.js"></script>
+    <script type="module" src="../../../lib-native/conversation/js/main.js"></script>
+</body>
+
+</html>

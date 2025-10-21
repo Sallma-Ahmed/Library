@@ -1,0 +1,291 @@
+[
+  {
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "BloomTargets": null,
+    "randomNumber": null,
+    "loTargets": null,
+    "numberOfquestion": 0,
+    "id": "ara_5r_2a_01_02_02",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "bloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "SubType": "DragDrop",
+    "items": [
+      {
+        "item": "mean",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "شَهِيّ",
+            "answer": "لَذِيذ مَحْبُوب"
+          },
+          {
+            "theword": "تَآلُفًا",
+            "answer": "حُبًّا وَإِخَاءً"
+          },
+          {
+            "theword": "دِيَاركُم",
+            "answer": "الْمُرَادُ: بَلَدكُم"
+          },
+          {
+            "theword": "مَيْدَانكُم",
+            "answer": "مَجَال عَمَلِكُمْ"
+          },
+          {
+            "theword": "نَبْغِي",
+            "answer": "نُرِيد"
+          },
+          {
+            "theword": "شَحَذُوا",
+            "answer": "نَشَّطُوا وَقَوَّوْا"
+          },
+          {
+            "theword": "رُقَاد",
+            "answer": "نَوْم وَغَفْلَة"
+          },
+          {
+            "theword": "تَكَاتُفًا",
+            "answer": "تَعَاوُنًا"
+          },
+          {
+            "theword": "هِبَة",
+            "answer": "عَطَاء وَمِنْحَة"
+          },
+          {
+            "theword": "حُرْقَة",
+            "answer": "شِدَّة الْغَيْظِ وَالْحُزْنِ"
+          },
+          {
+            "theword": "عُدَّة",
+            "answer": "اسْتِعْدَاد"
+          },
+          {
+            "theword": "شِدَاد",
+            "answer": "أَقْوِيَاء"
+          },
+          {
+            "theword": "وَطَنِيَّة",
+            "answer": "حُبّ الوَطَن"
+          },
+          {
+            "theword": "السَّبِيل",
+            "answer": "الطَّرِيق"
+          },
+          {
+            "theword": "وِدَاد",
+            "answer": "حُبّ وَوُدّ"
+          },
+          {
+            "theword": "رَغْبَة",
+            "answer": "الْمُرَادُ: إِقْبَال"
+          },
+          {
+            "theword": "الْحُسَّاد",
+            "answer": "مَنْ يَتَمَنَّوْنَ زَوَالَ النِّعْمَةِ عَنِ الْغَيْرِ"
+          },
+          {
+            "theword": "الْآبَاد",
+            "answer": "مَدَى الدَّهْرِ"
+          },
+          {
+            "theword": "عَتَاد",
+            "answer": "مَا أُعِدَّ لِلْحَرْبِ مِنْ أَسْلِحَةٍ"
+          },
+          {
+            "theword": "الْقَوْم",
+            "answer": "الْمَجْمُوعَة مِنَ النَّاسِ"
+          },
+          {
+            "theword": "سُهَاد",
+            "answer": "أَرَق"
+          }
+        ]
+      },
+      {
+        "item": "reverse",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "رُقَاد",
+            "answer": "صَحْوَة وَيَقَظَة"
+          },
+          {
+            "theword": "وِدَاد",
+            "answer": "كَرَاهِيَة وَبُغْض"
+          },
+          {
+            "theword": "شِدَاد",
+            "answer": "ضِعَاف"
+          },
+          {
+            "theword": "رَضَاعهُم",
+            "answer": "فِطَامهم"
+          },
+          {
+            "theword": "خُذُوا",
+            "answer": "أَعْطُوا"
+          },
+          {
+            "theword": "طَمَع",
+            "answer": "قَنَاعَة"
+          },
+          {
+            "theword": "شَحَذُوا",
+            "answer": "أَضْعَفُوا"
+          },
+          {
+            "theword": "سُهَاد",
+            "answer": "نَوْم"
+          },
+          {
+            "theword": "تَآلُفًا",
+            "answer": "عَدَاوَةً وَفُرْقَةً"
+          },
+          {
+            "theword": "الْغَرِيب",
+            "answer": "الْقَرِيب"
+          },
+          {
+            "theword": "لَيْل",
+            "answer": "نَهَار"
+          },
+          {
+            "theword": "أَوَّل",
+            "answer": "آخِر"
+          }
+        ]
+      },
+      {
+        "item": "plural",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "السَّبِيل",
+            "answer": "السُّبُل"
+          },
+          {
+            "theword": "السَّمَاء",
+            "answer": "السَّمَاوَات"
+          },
+          {
+            "theword": "الْغَرِيب",
+            "answer": "الْغُرَبَاء"
+          },
+          {
+            "theword": "عُدَّة",
+            "answer": "عُدَد"
+          },
+          {
+            "theword": "الْحَيَاة",
+            "answer": "الْحَيَوَات"
+          },
+          {
+            "theword": "مِنْحَة",
+            "answer": "مِنَح"
+          },
+          {
+            "theword": "زَمَان",
+            "answer": "أَزْمِنَة / أَزْمَان"
+          },
+          {
+            "theword": "عَتَاد",
+            "answer": "أَعْتِدَة / عُتُد"
+          },
+          {
+            "theword": "هِبَة",
+            "answer": "هِبَات"
+          },
+          {
+            "theword": "شَمْس",
+            "answer": "شُمُوس"
+          },
+          {
+            "theword": "مَيْدَان",
+            "answer": "مَيَادِين"
+          },
+          {
+            "theword": "الْقَوْم",
+            "answer": "الْأَقْوَام"
+          }
+        ]
+      },
+      {
+        "item": "single",
+        "check": false,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "DragDrop",
+        "answersType": "DragDrop",
+        "startTime": "",
+        "endTime": "",
+        "words": [
+          {
+            "theword": "الشَّبَاب",
+            "answer": "الشَّابّ"
+          },
+          {
+            "theword": "الْحُسَّاد",
+            "answer": "الْحَاسِد"
+          },
+          {
+            "theword": "أَحْدَاث",
+            "answer": "حَدَث"
+          },
+          {
+            "theword": "دِيَار",
+            "answer": "دَار"
+          },
+          {
+            "theword": "شِدَاد",
+            "answer": "شَدِيد"
+          },
+          {
+            "theword": "أَطْفَال",
+            "answer": "طِفْل"
+          },
+          {
+            "theword": "الْآبَاد",
+            "answer": "الْأَبَد"
+          },
+          {
+            "theword": "الْقُوَى",
+            "answer": "الْقُوَّة"
+          },
+          {
+            "theword": "بِلَاد",
+            "answer": "بَلَد"
+          }
+        ]
+      }
+    ]
+  }
+]

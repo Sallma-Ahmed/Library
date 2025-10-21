@@ -1,0 +1,364 @@
+.flex {
+
+  display  : flex;
+  flex-wrap: wrap;
+  width    : 100%;
+  margin   : 1vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.w6vh {
+  width: 6vh;
+}
+
+.w12vh {
+  width: 12vh;
+}
+
+.w125vh {
+  width: 12.5vh;
+}
+
+.w105vh {
+  width: 10vh;
+}
+
+.w13vh {
+  width: 13vh;
+}
+
+.m5l {
+  margin-left: 5vh;
+}
+
+.m1l {
+  margin-left: 1vh;
+}
+
+.w3vh {
+  width: 3vh;
+}
+
+.center {
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.w8vh {
+  width: 8vh !important;
+}
+
+.digital-screen .penguin .border .question .type-question {
+
+  flex-direction: row;
+}
+
+.fraction {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction  : column;
+  background-color: transparent !important;
+  position        : relative;
+  margin-left     : 0.5vw;
+  margin-right    : 0.5vw;
+  width           : 8vw;
+}
+
+.fraction .line {
+  border-bottom: 0.2vw solid #000000;
+  width        : 100%;
+  margin       : 0.6vw;
+}
+
+.fraction .upp,
+.fraction .down {
+  position     : relative;
+  margin-top   : -0.5vw;
+  text-align   : center;
+  margin-bottom: -0.5vw;
+}
+
+p {
+  font-size: 4.5vh !important;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.digital-screen .penguin .border.go {
+  animation: go 3.5s ease-in;
+}
+
+@-webkit-keyframes go {
+  from {
+    left: 0vh;
+  }
+
+  to {
+    left: 120vh;
+  }
+}
+
+@keyframes go {
+  from {
+    left: 0vh;
+  }
+
+  to {
+    left: 120vh;
+  }
+}
+
+.digital-screen .penguin .border.back {
+
+  animation: back 3.5s ease-out;
+}
+
+@-webkit-keyframes back {
+  from {
+    left: 120vh;
+  }
+
+  to {
+    left: 0vh;
+  }
+}
+
+@keyframes back {
+  from {
+    left: 120vh;
+  }
+
+  to {
+    left: 0vh;
+  }
+}
+
+/**/
+.digital-screen .penguin .border .question {
+  margin-left: 20vh;
+}
+
+.digital-screen .penguin .border .question.active {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+
+
+.b1v {
+  bottom: 1vh !important;
+}
+
+.b2v {
+  bottom: 2vh !important;
+}
+
+.digital-screen .penguin .border .question input {
+  font-size: 3vh !important;
+}
+
+.digital-screen .penguin .border .question .type-question {
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+  margin         : 3.5vh 1vh;
+}
+
+.flexwarp {
+
+  display  : flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+p {
+  font-size: 2.5vh !important;
+}
+
+.digital-screen .penguin .border .question .data p {
+  line-height: 1.5;
+}
+
+.data {
+  width: 5vw !important;
+}
+
+
+@-webkit-keyframes checknext {
+  from {
+    left: 0vh;
+    top : -10.5vh;
+  }
+
+  to {
+    left: 1vh;
+    top : -11.5vh;
+  }
+}
+
+@keyframes checknext {
+  from {
+    left: 0vh;
+    top : -10.5vh;
+  }
+
+  to {
+    left: 1vh;
+    top : -11.5vh;
+  }
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: -5vh;
+  }
+
+  to {
+    left: 8vh;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: -5vh;
+  }
+
+  to {
+    left: 8vh;
+  }
+}
+
+.w8v {
+  width: 8vh !important;
+}
+
+.w6v {
+  width: 6vh !important;
+}
+
+.h5v {
+  height: 5vh !important;
+}
+
+.digital-screen .penguin .border .question .type-question .container {
+  width          : 100%;
+  display        : flex;
+  justify-content: center;
+  flex-direction : column;
+}
+
+.font4 {
+  font-size: 4vh !important;
+}
+
+.inputs {
+  width          : 98%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  direction      : rtl;
+}
+
+.postion {
+  position: absolute;
+  bottom  : 31vh;
+  right   : -2vh;
+}
+
+.w106 {
+  width: 106%;
+}
+
+.r2v {
+  right: 2vh;
+}
+
+.r1v {
+  right: -1vh;
+}
+
+/**/
+.digital-screen .penguin .border .question p {
+  line-height: 5.5vh;
+}
+
+.fraction .line {
+  width: 9vh;
+}
+
+.fraction {
+  width: 9vh;
+}
+
+.w6vh {
+  width: 6vh !important;
+}
+
+.image {
+  width: 100%;
+}
+
+.img {
+  width: 98%;
+}
+
+.m29l {
+  margin-left: 29vh;
+}
+
+.m13l {
+  margin-left: 13vh;
+}
+
+.m22l {
+  margin-left: 22vh;
+}
+
+.b11v {
+  bottom: 11vh !important;
+}
+
+body input,
+body p,
+body li,
+body a,
+body div {
+  font-family: AraJozoor;
+  color      : #204a66 !important;
+}
+
+.img {
+  width: 40%;
+
+ 
+}
+img {
+  width: 100%;
+}
+.chooses {
+  width: auto;
+}
+
+.half {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  flex-direction : column;
+  width          : 45%;
+}

@@ -1,0 +1,1101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: Vazirmatn;
+}
+
+p {
+  font-size: 1.8vw;
+  font-family: Vazirmatn;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  -webkit-text-size-adjust: 100%;
+  font-family: Vazirmatn;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .resize {
+    width: 100vw !important;
+    height: calc((100 / 3) * 2vw) !important;
+  }
+
+  #Soltan {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    direction: rtl;
+
+    .logo {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 8vh;
+      height: 7vh;
+      right: 6%;
+      top: 1%;
+      position: absolute;
+      pointer-events: auto;
+      z-index: 1000000;
+    }
+
+    .loader {
+      background-color: #fff;
+      background-image: url(../images/preloader.gif);
+      width: 100vw;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      position: absolute;
+      z-index: 10;
+      top: auto;
+      right: auto;
+    }
+
+    .isSuccess {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      direction: rtl;
+    }
+
+    #startPage {
+      position: absolute;
+      width: 100%;
+      z-index: 1000;
+      background-color: #88e6f0;
+    }
+
+    .startButton {
+      position: absolute;
+      width: 18vw;
+      height: 16vw;
+      bottom: 23%;
+      left: 35%;
+      // background-color: aqua;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
+    .music {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 4.5vw;
+      height: 4.5vw;
+      position: absolute;
+      top: 1vw;
+      left: 1vw;
+      z-index: 1000;
+      cursor: pointer;
+
+    }
+
+    .help {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 4.5vw;
+      height: 4.5vw;
+      position: absolute;
+      top: 6vw;
+      left: 1vw;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    .home {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 4.5vw;
+      height: 4.5vw;
+      position: absolute;
+      top: 11vw;
+      left: 1vw;
+      cursor: pointer;
+    }
+
+    .langing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+
+      .doorButton {
+        position: absolute;
+        width: 8.5vw;
+        height: 14vw;
+        z-index: 900;
+        cursor: pointer;
+
+        &.left {
+          bottom: 35%;
+          left: 15%;
+        }
+
+        &.center {
+          bottom: 43%;
+          left: 47%;
+        }
+
+        &.right {
+          bottom: 37%;
+          right: 12%;
+        }
+      }
+
+
+
+
+
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+
+
+      .room,
+      .popUp {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 64.7vw;
+        height: 39.8vw;
+        justify-content: center;
+        display: flex;
+        padding: 5vw;
+        position: relative;
+        display: none;
+        flex-wrap: wrap;
+        text-align: justify;
+        z-index: 100;
+
+        .hint {
+          width: 5vw;
+          height: 8vw;
+          position: absolute;
+          z-index: 3000000000;
+          bottom: 0vw;
+          right: -1vw;
+          cursor: pointer;
+        }
+
+        p {
+          color: white;
+          line-height: 1.8;
+        }
+
+        .expand,
+        .minmize,
+        .expand-dim {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 5vw;
+          height: 5vw;
+          position: absolute;
+          bottom: 36vw;
+          right: 0vw;
+          cursor: pointer;
+        }
+
+        .expand-dim {
+          pointer-events: none;
+        }
+
+        .done {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 8vw;
+          height: 4vw;
+          position: absolute;
+          bottom: -0.5vw;
+          left: 30vw;
+          cursor: pointer;
+        }
+
+        .timer {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 6vw;
+          height: 7vw;
+          position: absolute;
+          bottom: 33vw;
+          left: -1.5vw;
+
+          .timer-shape {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 3.5vw;
+            height: 3.5vw;
+            position: absolute;
+            top: 4.5vw;
+            left: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5vw;
+            font-family: Cocon;
+          }
+        }
+
+        .stop {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 4vw;
+          height: 4vw;
+          position: absolute;
+          bottom: 1.3vw;
+          left: 8.5vw;
+          cursor: pointer;
+        }
+
+        .status {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 19vw;
+          height: 3.5vw;
+          position: absolute;
+          bottom: -2vw;
+          left: 24vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .type {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0.1vw;
+            right: 0.3vw;
+
+            .statusDim,
+            .statusTrue,
+            .statusFalse,
+            .statusOpen {
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              width: 1.3vw;
+              height: 1.8vw;
+              margin: 0.08vw;
+            }
+
+
+          }
+
+        }
+
+        .sound {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 4vw;
+          height: 4vw;
+          position: absolute;
+          bottom: 1.3vw;
+          left: 4vw;
+          cursor: pointer;
+        }
+
+
+        .title {
+          width: 100%;
+
+          p {
+            color: #F6C423;
+            text-align: center;
+          }
+        }
+
+        .button {
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          width: 4vw;
+          height: 4vw;
+          position: absolute;
+          pointer-events: auto;
+
+          &.next {
+            background-image: url(../images/next.png);
+            top: 16vw;
+            left: -2vw;
+          }
+
+          &.next_dim {
+            background-image: url(../images/next_dim.png);
+            top: 16vw;
+            left: -2vw;
+            pointer-events: none;
+
+          }
+
+          &.pre {
+            background-image: url(../images/pre.png);
+            right: -2vw;
+            top: 16vw;
+
+          }
+
+          &.pre_dim {
+            background-image: url(../images/pre_dim.png);
+            right: -2vw;
+            top: 16vw;
+            pointer-events: none;
+
+          }
+
+          &.exit {
+            background-image: url(../images/exit.png);
+            top: 16vw;
+            left: -2vw;
+          }
+        }
+
+
+        .choose,
+        .trueFalse {
+          width: 100%;
+          height: 100%;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          opacity: 0;
+          display: none;
+          animation: disShowQ 0.7s normal;
+
+          &.active {
+            display: flex;
+            height: 100%;
+            animation: showQ 0.7s normal;
+            opacity: 1;
+
+          }
+
+          @keyframes showQ {
+            0% {
+              opacity: 0;
+            }
+
+            50% {
+              opacity: 0;
+            }
+
+            75% {
+              opacity: 0.5;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes disShowQ {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.5;
+            }
+
+            75% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 0;
+            }
+          }
+
+          .questionChoose,
+          .questionTrueFalse {
+            width: 40vw;
+            height: 8vw;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+          }
+
+          .chooses {
+            width: 36vw;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .answersChoose,
+            .answersTrueFalse {
+              width: 15vw;
+              height: 7vw;
+              background-repeat: no-repeat;
+              background-size: contain;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              margin: 1vw;
+              font-family: Vazirmatn;
+              cursor: pointer;
+              font-size: 1.8vw;
+
+              &.true {
+                border: solid #25D600;
+                border-radius: 1.5vw 1.5vw 2.5vw 2.5vw;
+                pointer-events: none;
+              }
+
+              &.false {
+                border: solid #D30000;
+                border-radius: 1.5vw 1.5vw 2.5vw 2.5vw;
+                pointer-events: none;
+              }
+            }
+
+            .answersTrueFalse {
+              font-size: 3vw;
+              font-weight: bold;
+            }
+
+          }
+
+        }
+
+        .select {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-wrap: wrap;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          display: none;
+          animation: disShowQ 0.7s normal;
+
+          .content {
+            height: 81%;
+          }
+
+          .passage {
+            p {
+              font-size: 1.6vw;
+              user-select: text;
+              -webkit-user-select: text;
+              -webkit-text-size-adjust: 100%;
+
+              span {
+                user-select: text;
+                -webkit-user-select: text;
+                font-size: 1.6vw;
+                -webkit-text-size-adjust: 100%;
+              }
+            }
+
+
+
+            .flex {
+              display: flex;
+              flex-wrap: wrap;
+            }
+          }
+
+          .questionSelect {
+            width: 41.5vw;
+            min-height: 5.5vw;
+            max-height: 4.5vw;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+
+            .btn-select {
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              width: 3vw;
+              height: 3vw;
+              position: absolute;
+
+              &.CheckSelectDim {
+                top: 5vw;
+                left: 4vw;
+                pointer-events: none;
+
+                &.active {
+                  pointer-events: auto;
+                }
+              }
+
+              &.removeSelectDim {
+                top: 5vw;
+                left: 7.5vw;
+                pointer-events: none;
+
+                &.active {
+                  pointer-events: auto;
+                }
+              }
+
+              &.showSelect {
+                width: 10vw;
+                height: 3vw;
+                bottom: -2.5vw;
+                left: -6.5vw;
+              }
+            }
+          }
+
+          ::selection {
+            background-color: #df9f20;
+          }
+
+          @supports (-webkit-appearance: none) {
+            ::selection {
+              background-color: #df9f20;
+            }
+          }
+
+          .trueText {
+            background-color: #25D600;
+            user-select: none !important;
+            -webkit-user-select: none !important;
+
+          }
+
+          .falseText {
+            background-color: #D30000;
+            user-select: none !important;
+            -webkit-user-select: none !important;
+
+          }
+
+          .showText {
+            background-color: #25D600;
+            user-select: none;
+            -webkit-user-select: none !important;
+
+          }
+
+
+          &.active {
+            display: flex;
+            height: 100%;
+            animation: showQ 0.7s normal;
+            opacity: 1;
+
+          }
+
+          @keyframes showQ {
+            0% {
+              opacity: 0;
+            }
+
+            50% {
+              opacity: 0;
+            }
+
+            75% {
+              opacity: 0.5;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes disShowQ {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.5;
+            }
+
+            75% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 0;
+            }
+          }
+
+
+
+
+        }
+
+
+        .punctuate {
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-wrap: wrap;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          display: none;
+          animation: disShowQ 0.7s normal;
+
+          &.active {
+            display: flex;
+            height: 100%;
+            animation: showQ 0.7s normal;
+            opacity: 1;
+
+          }
+
+          @keyframes showQ {
+            0% {
+              opacity: 0;
+            }
+
+            50% {
+              opacity: 0;
+            }
+
+            75% {
+              opacity: 0.5;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes disShowQ {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.5;
+            }
+
+            75% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 0;
+            }
+          }
+
+
+          .question {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 1.8vw;
+            color: white;
+            line-height: 2.5;
+
+            div {
+              font-size: 1.5vw;
+              font-family: Vazirmatn;
+            }
+
+            .true {
+              color: #FDC435;
+              position: relative;
+            }
+
+
+            .chooses {
+              position: absolute;
+              display: flex;
+              color: white;
+              bottom: 3.5vw;
+              left: -8vw;
+
+              .answer {
+                background-color: #FDC435;
+                width: 6vw;
+                height: 3vw;
+                text-align: center;
+                margin: 0.3vw;
+                cursor: pointer;
+                border-radius: 1.5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 4px 3px 0px 2px rgba(241, 161, 43, 0.95);
+
+                &.poniterEvent {
+                  pointer-events: none !important;
+                }
+
+                &.true {
+                  background-color: #22AF00;
+                  box-shadow: 4px 3px 0px 2px rgba(21, 109, 0, 0.95);
+                  color: black;
+
+                }
+
+                &.false {
+                  background-color: #D30000;
+                  box-shadow: 4px 3px 0px 2px rgba(175, 26, 14, 0.75);
+                  color: black;
+
+                }
+              }
+
+              &.poniterEvent {
+                pointer-events: none;
+                display: none;
+                left: -20vw;
+
+              }
+
+
+            }
+
+            .trueWord {
+              color: #22AF00;
+              pointer-events: none;
+            }
+
+            .falseWord {
+              color: #D30000;
+              pointer-events: none;
+            }
+          }
+
+
+        }
+      }
+
+
+
+      .pop_text {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 15vw;
+        height: 15vw;
+        position: absolute;
+        bottom: 23vw;
+        right: 12vw;
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2vw;
+        text-align: center;
+
+        &.inside {
+          bottom: 10vw;
+          right: -4vw;
+
+        }
+
+        p {
+          color: black;
+          line-height: unset;
+          font-size: 1.5vw;
+          text-align: center;
+        }
+      }
+    }
+
+    .instruction {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .instructionBody {
+        width: 70vw;
+        height: 42.8vw;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        padding: 8vh;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+
+        .row {
+          background-size: 100% 100%;
+          width: 60vw;
+          height: 4.7vw;
+          background-color: rgb(57, 33, 18, 0.8);
+          border-radius: 0.8vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0.4vw;
+
+
+          .image {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 3.5vw;
+              height: 3.5vw;
+
+              &.twoImg {
+                width: 7vw;
+                height: 3.5vw;
+              }
+
+              &.done {
+                width: 5.5vw;
+                height: 3vw;
+              }
+
+              &.showanswer {
+                width: 7vw;
+                height: 3vw;
+              }
+
+              &.progress {
+                width: 8vw;
+                height: 2vw;
+              }
+
+              &.masbah {
+                width: 5vw;
+                height: 5vw;
+              }
+
+              &.timer {
+                width: 3vw;
+                height: 3.5vw;
+
+              }
+            }
+          }
+        }
+
+        .text {
+          width: 80%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding: 0.5vw;
+
+          p {
+            color: #FFFFFF;
+            font-size: 1.5vw;
+
+            span {
+              color: #EAB038;
+            }
+
+          }
+        }
+      }
+
+      .skip {
+        background-image: url(../images/icons/skip.png);
+        background-size: 100% 100%;
+        width: 9vw;
+        height: 4vw;
+        position: absolute;
+        bottom: 0.1vw;
+        left: 6vw;
+        cursor: pointer;
+      }
+
+      .next {
+        width: 4.5vw;
+        height: 4.5vw;
+        position: absolute;
+        background-image: url(../images/icons/next-icon.png);
+        background-size: 100% 100%;
+        top: 19vw;
+        right: -1vw;
+        cursor: pointer;
+
+        &.nextDim {
+          background-image: url(../images/icons/next-dim-icon.png);
+          pointer-events: none;
+
+        }
+      }
+
+      .prev {
+        width: 4.5vw;
+        height: 4.5vw;
+        position: absolute;
+        background-image: url(../images/icons/prev-icon.png);
+        background-size: 100% 100%;
+        top: 19vw;
+        left: -1vw;
+        cursor: pointer;
+
+        &.prevDim {
+          background-image: url(../images/icons/prev-dim-icon.png);
+          pointer-events: none;
+
+        }
+      }
+
+
+    }
+
+  }
+}
+
+
+
+.shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1100;
+  animation: mymove 1.3s normal;
+  opacity: 0;
+}
+
+@keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#doorLeft,
+#doorCenter,
+#doorRight {
+  position: absolute;
+  width: 100%;
+
+}
+
+#starLeft,
+#starCenter,
+#starRight,
+#soltanDoor {
+  position: absolute;
+  width: 100%;
+
+}
+
+#doorInHome {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+
+#characterInside {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#soltanDoor {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.poniterEvent {
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 1180/820) {
+  body {
+    #Soltan {
+
+      #startPage {
+        transform: scale(1.2);
+      }
+
+      #doorLeft,
+      #starLeft {
+        transform: scale(1.04);
+      }
+
+      .startButton {
+        bottom: 25vh;
+        left: 33%;
+      }
+
+      .doorLeftButton {
+        bottom: 32vh;
+        left: 14%;
+      }
+
+      .container {
+        transform: scale(1.2);
+
+      }
+
+    }
+  }
+}
+
+
+// @media screen and (width : 1366px) and (height : 1024px){
+//   body{
+//     #startPage{
+//       transform: scale(1.2);
+//     }
+// }
+// }

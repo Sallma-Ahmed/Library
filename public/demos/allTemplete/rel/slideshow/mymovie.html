@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <link rel='icon' href='../../../lib-native/slideshow/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/slideshow/style/style.css">
+    <link rel="stylesheet" href="../../../lib-native/slideshow/style/imgs-grade-6.css">
+    <script src="../../../lib-native/slideshow/js/lottie-min.js"></script>
+    <script src="../../../lib-native/slideshow/js/vue-min.js"></script>
+    <!-- <script src="../../../js/submit_sender.js"></script> -->
+</head>
+
+<body>
+    <div id="slide-show" data-urlpage="data" grade="6">
+        <div class="loader" v-show="!isSuccess || !isLoading"></div>
+
+        <div class="isSuccess" v-show=" isSuccess && isLoading">
+
+            <div class="start-lo" v-if="!startLo">
+                <div class="start-button" @click="start()"></div>
+            </div>
+
+            <div class="lo-container" v-show="startLo">
+
+
+                <div class="inner-container">
+
+
+                    <div class="logo"></div>
+                    <template v-if="startLo">
+                        <div class="home" @click="goHome()" v-if="slideCounter<maxLengthSlide"></div>
+                        <div class="sound" @click="mute()" :class="muteSound ? 'off' : 'on'"
+                            v-if="slideCounter<maxLengthSlide">
+                        </div>
+                    </template>
+
+                    <template v-if="slide">
+                        <template v-if="slideCounter<maxLengthSlide">
+                            <div class="next" @click="next()">
+                                <div class="hand" v-if="slideCounter==0 &&hint"></div>
+                            </div>
+
+                            <div class="prev" @click="prev()" :class="{'dimmed': slideCounter==0}"></div>
+
+                            <div class="slide-content" v-if="slideCounter<maxLengthSlide">
+                                <div class="slides">
+                                    <img :src="posts.slides[slideCounter].img" alt="">
+                                </div>
+                            </div>
+                        </template>
+                        <template v-if="slideCounter==maxLengthSlide">
+                            <div class="start-questions" @click="startQuestions()">
+                                <div class="hand"></div>
+                            </div>
+                        </template>
+                    </template>
+
+                    <template v-show="!slide && questionCounter!= maxLengthQuestions">
+                        <div class="questions" v-for="question in shuffledQuestion" v-if="question.active"
+                            :class="{'hide':!slide && questionCounter == maxLengthQuestions, 'active':question.active}">
+                            <div class="div" v-if="question.type == 1">
+                                <div class="question" :class="{'img': question.img!= null&& question.img != ''}">
+                                    <p v-if="question.text!= null&& question.text != ''" v-for="text in question.text"></p>
+                                        {{text}}</p>
+                                    <div class="image" v-if="question.img!= null&& question.img != ''">
+                                        <img :src="question.img" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="answers">
+                                    <div class="answer" v-for="answer in question.answers"
+                                        @click="getUserSelection(answer)" :class="{'right': isRight&&answer.checked, 'wrong': !isRight&&answer.checked, 'closed': checked, 
+                                        'img': question.img!= null&& question.img != ''}">
+                                        <p v-if="answer.text!= null&& answer.text != ''" v-for="text in answer.text">
+                                            {{text}}</p>
+                                        <div class="image" v-if="answer.img!= null&& answer.img != ''">
+                                            <img :src="answer.img" alt="">
+                                        </div>
+
+                                        <div class="sound paused play_sound"
+                                            v-if="answer.sound!= null && answer.sound!=''"
+                                            @click="playQuestionSound($event)">
+                                            <audio :src="answer.sound"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="div" v-if="question.type == 2">
+                                <div class="question" :class="{'img': question.img!= null&& question.img != ''}">
+                                    <p v-if="question.text!= null&& question.text != ''" v-for="text in question.text">
+                                        {{text}}</p>
+                                    <div class="image" v-if="question.img!= null&& question.img != ''">
+                                        <img :src="question.img" alt="">
+                                    </div>
+                                </div>
+                                <div class="answers ">
+                                    <div class="answer type-2" v-for="answer in question.answers"
+                                        @click="getUserSelection(answer)" :class="{'right': isRight&&answer.checked, 'wrong': !isRight&&answer.checked, 'closed': checked, 
+                                        'img': question.img!= null&& question.img != ''}">
+                                        <p v-if="answer.text!= null&& answer.text != ''" v-for="text in answer.text">
+                                            {{text}}</p>
+
+                                        <div class="image" v-if="answer.img!= null&& answer.img != ''">
+                                            <img :src="answer.img" alt="">
+                                        </div>
+
+                                        <div class="sound paused play_sound"
+                                            v-if="answer.sound!= null && answer.sound!=''"
+                                            @click="playQuestionSound($event)">
+                                            <audio :src="answer.sound"></audio>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tf-type" v-if="question.type == 3">
+                                <div class="tf-question" v-if="question.tfType=='text'"
+                                    :class="{'image': question.img!= null&& question.img != ''}">
+                                    <div class="image-text" v-if="question.img!= null&& question.img != ''">
+                                        <img :src="question.img" alt="">
+                                    </div>
+
+                                    <p v-if="question.text!= null&& question.text != ''" v-for="text in question.text">
+                                        {{text}}</p>
+                                </div>
+
+                                <div class="tf-question img" v-if="question.tfType=='image'">
+                                    <div class="image">
+                                        <img :src="question.img" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="tf-answers">
+                                    <div class="tf-answer true" @click="getUserSelection(question.answers[0])"
+                                        :class="{'right': isRight&&question.answers[0].checked, 'wrong': !isRight&&question.answers[0].checked, 'closed': checked}">
+                                    </div>
+                                    <div class="tf-answer false" @click="getUserSelection(question.answers[1])"
+                                        :class="{'right': isRight&&question.answers[1].checked, 'wrong': !isRight&&question.answers[1].checked, 'closed': checked}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="right-answer" v-show="playRight&&!slide&& questionCounter < maxLengthQuestions">
+                            <div id="coins"></div>
+                        </div>
+                        <div id="states" v-show="!slide&& questionCounter < maxLengthQuestions"></div>
+                    </template>
+
+
+                    <div class="feedback" :class="{'show':!slide && questionCounter >= maxLengthQuestions}">
+                        <div class="mosque">
+                            <div class="text">
+                                <p>{{this.feedbackText}}</p>
+                            </div>
+                            <div class="progress">
+                                <div id="progressbar">
+                                </div>
+                            </div>
+                            <div class="reload" @click="goHome()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../lib-native/slideshow/js/main.js"></script>
+    <script src="../../../lib-native/slideshow/js/animation.js"></script>
+
+</body>
+
+</html>

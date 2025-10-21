@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصطلحات العلمية</title>
+    <link rel='icon' href='../../../lib-native/scientific-terms/images/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="../../../lib-native/scientific-terms/css/style.css">
+    <link rel="stylesheet" href="./style/lo-style.css">
+
+    <script src="../../../lib-native/scientific-terms/js/vue-min.js"></script>
+    <script src="../../../lib-native/scientific-terms/js/lottie-min.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div id="Mostla7at" data-urlpage="data">
+        <div class="Logo"></div>
+
+        <div class="music" @click="muteMusic()" :class="[bgMusic ? 'play' : 'mute', activesound ? 'active' : '']"></div>
+        <div class="loader" v-show=" !this.isSuccess || !this.isLoaded"></div>
+
+        <div class="isSuccess" v-show=" this.isSuccess && this.isLoaded">
+            <div id="StartPlay" @click="startTime() , start()"></div>
+            <div id="QandA">
+            </div>
+
+            <div class="quizRename">
+                <div class="Light"></div>
+                <template v-for="(Items, index) in Items">
+
+                    <div class="imgs" v-for="(post, index) in Items.posts" v-if="post.isActive">
+                        <img :src="post.urlPost">
+                    </div>
+                </template>
+                <template v-for="(Items, index) in Items">
+                    <div class="text" v-for="(post, index) in Items.posts" v-if="post.isActive ">
+                        <div class="Choose labelOne" @click="endTime(index);  checkCorrect($event)"
+                            :data-clicked="post.checkClicked" :data-correct="post.correctAnswerOne">
+                            {{post.labelOne}}</div>
+                        <div class="Choose labelTwo" @click="endTime(index);  checkCorrect($event)"
+                            :data-clicked="post.checkClicked" :data-correct="post.correctAnswerTwo">
+                            {{post.labelTwo}}</div>
+                        <div class="quiz">{{post.quiz}}</div>
+                    </div>
+                </template>
+                <template v-for="(Items, index) in Items">
+                    <div class="textTwo" v-for="(post, index) in Items.posts" v-if="post.isActive ">
+                        <div class="roundOne">
+                            <div class="title correctAnswer">
+                                <p>{{post.correctTitle}}</p>
+                            </div>
+                            <div class="pragraph correctAnswer">
+                                <p>{{post.correctParagraph}}</p>
+                            </div>
+
+                            <div class="title wrongAnswer">
+                                <p>{{post.wrongTitle}}</p>
+                            </div>
+                            <div class="pragraph wrongAnswer">
+                                <p>{{post.wrongParagraph}}</p>
+                            </div>
+                            <div class="next" @click="next($event)" :data-clicked=" post.checkClicked" data-next="true">
+                            </div>
+                        </div>
+                        <div class="roundTwo">
+                            <div class="title ">
+                                <p class="font2">{{post.item}}</p>
+                            </div>
+                            <div class="pragraph">
+                                <p>{{post.expression}}</p>
+                                <div class="img"><img :src="post.urlImg"></div>
+                            </div>
+                            <div class="next" @click="next($event)" :data-clicked=" post.checkClicked" data-next="true">
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <template v-for="(Items, index) in Items">
+
+                <div v-for="(post, index) in Items.posts" class="items" :id="post.id"
+                    :class="{ 'active': post.isActive, 'see': post.seeQuiz ,'opacity-one':post.opacity_item ,'pointer-auto':post.pointer , 'hideSee':!post.seenshow && post.seeQuiz}"
+                    @click="activate(post.id,index)" :data-number="index+1">
+                    <p>{{post.item}}</p>
+                </div>
+            </template>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../../lib-native/scientific-terms/js/vmain.js"></script>
+    <script src="../../../lib-native/scientific-terms/js/animation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,817 @@
+[
+  {
+    "informationLO": [
+      "Examples for all input types"
+    ],
+    "numOfQuestion": 4,
+    "items": [
+      {
+        "id": 1,
+        "question": "مستطيل يزيد طوله عن عرضه بمقدار 7 أمتار، فإذا كان محيطه يساوى 66 مترًا أوجد بعديه.",
+        "text": "نفرض أن الطول=  م، العرض = (7- ) م",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2",
+               "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "( x + x -"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": ") ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "66", "width": "",
+              "height": ""
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "x -"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "66", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "33", "width": "",
+              "height": ""
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": " x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "33", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": " +"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": " ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "40", "width": "",
+              "height": ""
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": " x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "40", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": " ÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "20", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": " ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2", "width": "",
+              "height": ""
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "  م،"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "13", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "  = م، العرض  "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "20", "width": "",
+              "height": ""
+            },
+            {
+              "kind": "symbol",
+              "value": "  = الطول "
+            }
+          ]
+        ],
+        "correctFinalResult": "20"
+      },
+      {
+        "id": 3,
+        "question": "أوجد الوسط الحسابي للأعداد 4 ، 6 ، 8",
+        "text": "Mean Example",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "mean",
+              "values": [
+                "4",
+                "6",
+                "8"
+              ],
+              "valid": "6"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "6"
+            }
+          ]
+        ],
+        "correctFinalResult": "6"
+      },
+      {
+        "id": 4,
+        "question": "مستطيل يزيد طوله عن عرضه بمقدار 7 أمتار، فإذا كان محيطه يساوى 66 مترًا أوجد بعديه.",
+        "text": "نفرض أن الطول=  م، العرض = (7- ) م",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "( x + x -"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7"
+            },
+            {
+              "kind": "symbol",
+              "value": ") ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "66"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "x -"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "66"
+            },
+            {
+              "kind": "symbol",
+              "value": "÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "33"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": " x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "33"
+            },
+            {
+              "kind": "symbol",
+              "value": " +"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7"
+            },
+            {
+              "kind": "symbol",
+              "value": " ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "40"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": " x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "40"
+            },
+            {
+              "kind": "symbol",
+              "value": " ÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "20"
+            },
+            {
+              "kind": "symbol",
+              "value": " ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "  م،"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "13"
+            },
+            {
+              "kind": "symbol",
+              "value": "  = م، العرض  "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "20"
+            },
+            {
+              "kind": "symbol",
+              "value": "  = الطول "
+            }
+          ]
+        ],
+        "correctFinalResult": "20"
+      },
+      {
+        "id": 5,
+        "question": "مستطيل بعداه بالمتر، طوله ثلاثة أمثال عرضه، إذا زاد طوله بمقدار 4 أمتار وزاد عرضه بمقدار 8 أمتار أصبح مربعًا أوجد مساحة المستطيل.",
+        "text": "نفرض أن العرض = x م ، الطول = 3م",
+        "rows": [
+          [
+            {
+              "kind": "symbol",
+              "value": "3 x + "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            },
+            {
+              "kind": "symbol",
+              "value": "x +"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "8"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "3 x - x = "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "8"
+            },
+            {
+              "kind": "symbol",
+              "value": "-"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "2 x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": " x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            },
+            {
+              "kind": "symbol",
+              "value": " ÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": " ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "م"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "6"
+            },
+            {
+              "kind": "symbol",
+              "value": "  = م، طول المستطيل  "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "= عرض المستطيل "
+            }
+          ]
+        ],
+        "correctFinalResult": "20"
+      },
+      {
+        "id": 6,
+        "question": "عددان طبيعيان أحدهما ثلاثة أمثال الآخر ومجموعهما 60 فما العددان؟",
+        "text": "نفرض أن العددين هما: 3 , ",
+        "rows": [
+          [
+            {
+              "kind": "symbol",
+              "value": " x + "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "3"
+            },
+            {
+              "kind": "symbol",
+              "value": "x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "60"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            },
+            {
+              "kind": "symbol",
+              "value": "x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "60"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "60"
+            },
+            {
+              "kind": "symbol",
+              "value": " ÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "4"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "15"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "15"
+            },
+            {
+              "kind": "symbol",
+              "value": " , "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "45"
+            },
+            {
+              "kind": "symbol",
+              "value": ":العددان هما"
+            }
+          ]
+        ],
+        "correctFinalResult": "15 , 45"
+      },
+      {
+        "id": 7,
+        "question": "ما العدد الذى إذا طُرح من ثلاثة أمثاله كان الناتج 14؟",
+        "text": "نفرض أن العدد هو : x ",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "3"
+            },
+            {
+              "kind": "symbol",
+              "value": "x - x = "
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "14"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "14"
+            }
+          ],
+          [
+            {
+              "kind": "symbol",
+              "value": "x ="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "14"
+            },
+            {
+              "kind": "symbol",
+              "value": " ÷"
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "2"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7"
+            }
+          ],
+          [
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "7"
+            },
+            {
+              "kind": "symbol",
+              "value": ":العدد هو"
+            }
+          ]
+        ],
+        "correctFinalResult": "7"
+      },
+      {
+        "id": 2,
+        "question": "Fraction example",
+        "text": "Simplify the fraction",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "fraction",
+              "numerator": "",
+              "denominator": "",
+              "valid": "1/2"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "fraction",
+              "numerator": "",
+              "denominator": "",
+              "valid": "2/4"
+            }
+          ]
+        ],
+        "correctFinalResult": "1/2"
+      },
+      {
+        "id": 3,
+        "question": "Mixed number example",
+        "text": "Convert to improper fraction",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "mixed",
+              "whole": "",
+              "numerator": "",
+              "denominator": "",
+              "valid": "1 1/2"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "fraction",
+              "numerator": "",
+              "denominator": "",
+              "valid": "3/2"
+            }
+          ]
+        ],
+        "correctFinalResult": "3/2"
+      },
+      {
+        "id": 4,
+        "question": "Mean example",
+        "text": "Find the mean of values",
+        "rows": [
+          [
+            {
+              "kind": "input",
+              "type": "mean",
+              "values": [
+                "",
+                "",
+                ""
+              ],
+              "valid": "5"
+            },
+            {
+              "kind": "symbol",
+              "value": "="
+            },
+            {
+              "kind": "input",
+              "type": "text",
+              "value": "",
+              "valid": "5"
+            }
+          ]
+        ],
+        "correctFinalResult": "5"
+      }
+    ]
+  }
+]

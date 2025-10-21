@@ -1,0 +1,869 @@
+[{
+  "counterCorrect": 0,
+  "LOcorrectcounter": 0,
+  "BloomTargets": null,
+  "randomNumber": null,
+  "loTargets": null,
+  "numberOfquestion": 0,
+  "id": "ara_6r_1a_02_01_06",
+  "subjectId": "",
+  "conceptId": "",
+  "unitId": "",
+  "lessonId": "",
+  "title": "",
+  "keywords": "",
+  "learningObjectives": "",
+  "bloomLevels": [],
+  "type": "",
+  "loDegree": null,
+  "UserDegree": 0,
+  "SubType": "input",
+  "startTime": "",
+  "endTime": "",
+  "readText": "اقرَأ الأبياتَ جيدًا",
+  "typeLo":2,
+  "doors": [{
+      "passage": "حَيُّوا الشَّبَـابَ فَهُمْ حُمَــاةُ الْوَادِي <span style='margin-right:6vw'></span> كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ <span style='margin-right:7vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفُونَ بِــــحُبٍّ <span style='margin-right:8vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+      "choose": {
+        "questions": [{
+            "type": 4,
+            "active": false,
+            "parag": "مُرادِفُ (يَتَكَاتَفُونَ):    .......",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "الكَلِمةُ الصحيحةُ تدُلُّ على المُشارَكةِ والمُسَاعَدةِ.",
+            "numberQuestion": 1,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "يتصالَحونَ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "يتقدَّمونَ ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "يتعاوَنونَ ",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "يتصافَحونَ",
+                "answer": false,
+                "check": false
+              }
+            ]
+          },
+          {
+            "active": false,
+            "parag": "قَولُ الشَّاعرِ: «فَهُمْ حُمَاةُ الْوَادِي» يدُلُّ على   .......",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "الكَلِمةُ الصحيحةُ جِذْرُها عَظُمَ.",
+            "numberQuestion": 2,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "التَّعْظيمِ ",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "الإبْداعِ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "التَّواضُعِ ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "القناعةِ",
+                "answer": false,
+                "check": false
+              }
+            ]
+          }
+
+        ]
+      },
+      "tureFalse": {
+
+        "questions": [{
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "قَوْلُ الشَّاعرِ: «حَيُّوا الشَّبَابَ» أُسْلوبُ أَمْرٍ.",
+            "hint": "هو أسلوبٌ لطلبِ فعلِ الشَّيءِ.",
+            "numberQuestion": 3,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+              "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": false,
+                "check": false
+              }
+
+            ]
+          },
+          {
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "«شُيِّدَتْ أَمْجَادٌ» تعبيرٌ حقيقيٌّ.",
+            "hint": "شُبِّهَ المجدُ بأنه بناءٌ يُشيَّدُ.",
+            "numberQuestion": 4,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": true,
+                "check": false
+              }
+
+            ]
+          }
+
+        ]
+      },
+      "selectText": {
+        "questions": [{
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": "جمعُ (مَجْد): .....",
+
+            "sentence": "حَيُّوا الشَّبَـابَ فَهُمْ حُمَــاةُ الْوَادِي <span style='margin-right:11vw'></span> كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ <span style='margin-right:12vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفُونَ بِــــحُبٍّ <span style='margin-right:13vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+
+            "correct": "حَيُّوا الشَّبَـابَ فَهُمْ حُمَــاةُ الْوَادِي <span style='margin-right:11vw'></span> كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ <span class=showText>أَمْجَـــادٌ</span> <span style='margin-right:12vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفُونَ بِــــحُبٍّ <span style='margin-right:13vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+
+            "correctAnswer": ["أَمْجَـــادٌ"],
+            "selectionText": "",
+            "hint": "بها مدٌّ بالألفِ.",
+            "numberQuestion": 5,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          },
+          {
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": "وضَّحَ الشاعِرُ واجِباتِ الشبابِ تِجاهَ الوطَنِ، حدِّدْها.",
+            "sentence": "حَيُّوا الشَّبَـابَ فَهُمْ حُمَــاةُ الْوَادِي <span style='margin-right:11vw'></span> كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ <span style='margin-right:12vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفُونَ بِــــحُبٍّ <span style='margin-right:13vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+
+
+            "correct": "حَيُّوا الشَّبَـابَ فَهُمْ حُمَــاةُ الْوَادِي <span style='margin-right:11vw'></span> <span class=showText>كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ </span><span style='margin-right:12vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفُونَ بِــــحُبٍّ <span style='margin-right:13vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+            "correctAnswer": ["كَــمْ عَمَّــرُوا كَــمْ طَـــوَّرُا بِبِــلَادِي وَبِعِلْمِهِـمْ قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ "],
+            "selectionText": "",
+            "hint": "الأفعالُ التي فعلَها الشبابُ كما ذكَرَها الشاعرُ.",
+            "numberQuestion": 6,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          }
+
+
+        ]
+      },
+      "punctuate": {
+        "questions": [{
+            "title": "اضغَطْ على الكَلِماتِ الخطأ، ثم اختَرِ التصويبَ المُناسِبَ.",
+            "active": false,
+            "numberQuestion": 7,
+            "sentence": "حَيُّوا الشَّبَـابَ فَهو حُمَــاةُ الْوَادِي <span style='margin-right:11vw'></span> كَــمْ عَمَّــرُوا كَــمْ طـــوَّرا بِبِــلَادِي وَبِعِلْمِهِـا قَـــدْ شُيِّـــدَتْ أَمْجَـــادٌ <span style='margin-right:12vw'></span> فَعَتَادُ أَهْلِ الْعِلْـــمِ خَيْـــرُ عَتَـــــادِ فِي سَعْيِـــــهِمْ يَتَكَاتَفان بِــــحُبٍّ <span style='margin-right:12vw'></span> تَحْيَــــا الْبِـــــلَادُ بِوَحْــــــدَةٍ وَوِدَادِ",
+            "hint": ["للغائبِ جمعِ المُذكَّرِ السالمِ.", "تدُلُّ على الجمعِ. ", "الكَلِمةُ اتصَلَت بضميرِ غائبٍ لجمعِ المُذكَّرِ السالِمِ. ", "الكَلِمةُ تدُلُّ على جمعِ المُذكَّرِ السالِمِ."],
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "wrongWord": [{
+                "word": "فَهو",
+                "correctAnswerTochoose": 3,
+
+                "chooses": [{
+                    "toChoose": "فهُما",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "فهُنَّ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "فَهُمْ",
+                    "answer": true,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "طـــوَّرا",
+                "correctAnswerTochoose": 3,
+                "chooses": [{
+                    "toChoose": "طوَّر",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "طوَّرت",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "طَــــوَّرُوا",
+                    "answer": true,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "وَبِعِلْمِهِـا",
+                "correctAnswerTochoose": 3,
+                "chooses": [{
+                    "toChoose": "وبعِلْمِهنَّ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "وبِعِلْمِهما",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "وَبِعِلْمِهِـمْ",
+                    "answer": true,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "يَتَكَاتَفان",
+                "correctAnswerTochoose": 3,
+                "chooses": [{
+                    "toChoose": "يتكاتَفْن ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "يتكاتَفَا ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "يَتَكَاتَفُونَ  ",
+                    "answer": true,
+                    "check": false
+                  }
+
+                ]
+              }
+            ]
+          }
+
+        ]
+      }
+    },
+    {
+      "passage": "يَا مَعْشَرَ الطُّلَّابِ هَذَا عَهْدُكُـمْ <span style='margin-right:11vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عِظَامِ أَنْتُمْ رَجَاءُ الشَّعْبِ أَنْتُمْ ذُخْــــرُهُ <span style='margin-right:11vw'></span> وَحِمَاهُ فِي مُسْتَقْبَــــلِ الْأَيَّــــــامِ إِنَّ الشَّبَابَ إِذَا سَمَا بِطُمُوحِـهِ <span style='margin-right:11vw'></span>  جَعَلَ النُّجُـــــــومَ مَوَاطِــئَ الْأَقْدَامِ",
+      "choose": {
+        "questions": [{
+            "type": 4,
+            "active": false,
+            "parag": "مُرادِفُ (سَمَـا): .........",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "المُرادِفُ يدُلُّ على الرفعةِ. ",
+            "numberQuestion": 1,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "عَلا وارتفَعَ",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "قفَزَ وجرَى ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "سبَقَ وتقدَّمَ ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "كثُرَ ونَما ",
+                "answer": false,
+                "check": false
+              }
+            ]
+          },
+          {
+            "active": false,
+            "parag": "مُفرَدُ (الشَّبَـــاب): ............... ",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "إذا حذَفْنا الباءَ الأُولَى الموجودةَ في الكَلِمةِ ستكونُ مُفرَدةً.",
+            "numberQuestion": 2,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "الشَّاب  ",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "الشَّبيه",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الشَّيب ",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الشَّوْب",
+                "answer": false,
+                "check": false
+              }
+            ]
+          }
+
+        ]
+      },
+      "tureFalse": {
+
+        "questions": [{
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "يَرَى الشاعرُ أنَّ الشبابَ هم أَمَلُ الوَطَنِ ورجاؤُه. ",
+            "hint": "الإجابةُ تكمُنُ في البَيتِ الأخيرِ.",
+            "numberQuestion": 3,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+              "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": false,
+                "check": false
+              }
+
+            ]
+          },
+          {
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "«يَا مَعْشَرَ الطُّلَّابِ» أسلوبُ أمرٍ.",
+            "hint": "الشاعرُ هنا يُنادِي الطلابَ. ",
+            "numberQuestion": 4,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+              "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": true,
+                "check": false
+              }
+
+            ]
+          }
+
+        ]
+      },
+      "selectText": {
+        "questions": [{
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": "مُضادُّ (ماضي): .......",
+            "sentence": "يَا مَعْشَرَ الطُّلَّابِ هَذَا عَهْدُكُـمْ <span style='margin-right:16vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عِظَامِ أَنْتُمْ رَجَاءُ الشَّعْبِ أَنْتُمْ ذُخْــــرُهُ <span style='margin-right:16vw'></span> وَحِمَاهُ فِي مُسْتَقْبَــــلِ الْأَيَّــــــامِ إِنَّ الشَّبَابَ إِذَا سَمَا بِطُمُوحِـهِ <span style='margin-right:16vw'></span>  جَعَلَ النُّجُـــــــومَ مَوَاطِــئَ الْأَقْدَامِ",
+            "correct": "يَا مَعْشَرَ الطُّلَّابِ هَذَا عَهْدُكُـمْ <span style='margin-right:16vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عِظَامِ أَنْتُمْ رَجَاءُ الشَّعْبِ أَنْتُمْ ذُخْــــرُهُ <span style='margin-right:16vw'></span> وَحِمَاهُ فِي <span class=showText>مُسْتَقْبَــــلِ</span> الْأَيَّــــــامِ إِنَّ الشَّبَابَ إِذَا سَمَا بِطُمُوحِـهِ <span style='margin-right:16vw'></span>  جَعَلَ النُّجُـــــــومَ مَوَاطِــئَ الْأَقْدَامِ",
+            "correctAnswer": ["مُسْتَقْبَــــلِ"],
+            "selectionText": "",
+            "hint": "كَلِمةٌ تدُلُّ على ما هو قادمٌ. ",
+            "numberQuestion": 5,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          },
+          {
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": "مُفرَدُ (الشُّعوب): .......",
+            "sentence": "يَا مَعْشَرَ الطُّلَّابِ هَذَا عَهْدُكُـمْ <span style='margin-right:16vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عِظَامِ أَنْتُمْ رَجَاءُ الشَّعْبِ أَنْتُمْ ذُخْــــرُهُ <span style='margin-right:16vw'></span> وَحِمَاهُ فِي مُسْتَقْبَــــلِ الْأَيَّــــــامِ إِنَّ الشَّبَابَ إِذَا سَمَا بِطُمُوحِـهِ <span style='margin-right:16vw'></span>  جَعَلَ النُّجُـــــــومَ مَوَاطِــئَ الْأَقْدَامِ",
+            "correct": "يَا مَعْشَرَ الطُّلَّابِ هَذَا عَهْدُكُـمْ <span style='margin-right:16vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عِظَامِ أَنْتُمْ رَجَاءُ <span class=showText>الشَّعْبِ</span> أَنْتُمْ ذُخْــــرُهُ <span style='margin-right:16vw'></span> وَحِمَاهُ فِي مُسْتَقْبَــــلِ الْأَيَّــــــامِ إِنَّ الشَّبَابَ إِذَا سَمَا بِطُمُوحِـهِ <span style='margin-right:16vw'></span>  جَعَلَ النُّجُـــــــومَ مَوَاطِــئَ الْأَقْدَامِ",
+            "correctAnswer": ["الشَّعْبِ"],
+            "selectionText": "",
+            "hint": "إذا حذَفْنا الواوَ من الكَلِمةِ الجمعِ ستكونُ مُفرَدًا.",
+            "numberQuestion": 6,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          }
+
+
+        ]
+      },
+      "punctuate": {
+        "questions": [{
+            "title": "اضغَطْ على الكَلِماتِ الخطأ، ثم اختَرِ التصويبَ المُناسِبَ.",
+            "active": false,
+            "numberQuestion": 7,
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "sentence": "يَا مَعْشَرَ الطُّلَّابِ هؤلاء عَهْدُكُمْ <span style='margin-right:12vw'></span> فَاسْعَوْا لِكَسْبِ الْمَجْدِ سَعْيَ عظيم أَنْتُمْ رَجَاءُ الشَّعْبِ أَنْت ذُخْــــرُهُ <span style='margin-right:12vw'></span> وَحِمَاهُ فِي مُسْتَقْبَــــلِ الْأَيَّــــــــامِ إِنَّ الشَّبَـابَ إِذَا دنـــا بِطُمُوحِــهِ <span style='margin-right:12vw'></span> جَعَلَ النُّجُـــــــــــومَ  مَوَاطِئَ الْأَقْدَامِ",
+            "hint": ["اسمُ إشارةٍ للمُذكَّرِ المُفرَدِ.", "جمعُ (عظيم).", "للمُخاطَبِ جمعِ المُذكَّرِ السالِمِ. ", "كَلِمةٌ جِذْرُها (سَمَوَ). "],
+            "wrongWord": [{
+                "word": "هؤلاء",
+                "correctAnswerTochoose": 1,
+                "chooses": [{
+                    "toChoose": "هذا",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "هذه",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "هذان",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "عظيم",
+                "correctAnswerTochoose": 2,
+                "chooses": [{
+                    "toChoose": "مُعظَم",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "عِظَام",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "تَعاظُم",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "أَنْت",
+                "correctAnswerTochoose": 3,
+                "chooses": [{
+                    "toChoose": "أنتن ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "أنتما",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "أنتم",
+                    "answer": true,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "دنـــا",
+                "correctAnswerTochoose": 1,
+                "chooses": [{
+                    "toChoose": "سَما",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "قفَزَ ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "صعِدَ",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              }
+            ]
+          }
+
+        ]
+      }
+    },
+    {
+      "passage": "قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:11vw'></span> الْخَيْــــرُ فِــــي الشَّبَـــــابِ فَهُــــــمْ عَتَـــــــادُ قَوْمِـــــــــي <span style='margin-right:11vw'></span>  وَ الْحَــــــــــلُّ لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــوِدَادِ عـَـــــــــادُوا  <span style='margin-right:11vw'></span>  وَالْــــــــــوُدُّ كَالسَّحَـــــــــــابِ",
+      "choose": {
+        "questions": [{
+            "type": 4,
+            "active": false,
+            "parag": "مُرادِفُ (الْـــوِدَاد): .......",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "كَلِمةٌ تدُلُّ على المحبةِ.",
+            "numberQuestion": 1,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "التقرُّب",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الحُب",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "الصَّداقة",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الأُخوَّة",
+                "answer": false,
+                "check": false
+              }
+            ]
+          },
+          {
+            "active": false,
+            "parag": "جمعُ (الْحَــــل): ......",
+            "title": "اختَرِ الإجابةَ الصحيحةَ:",
+            "hint": "أضِفْ للمُفرَدِ واوًا ولامًا.",
+            "numberQuestion": 2,
+            "typeQuestion": "choose",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+                "toChoose": "الحُلول",
+                "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "الحَلال",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الحُلي",
+                "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "الأَحوال",
+                "answer": false,
+                "check": false
+              }
+            ]
+          }
+
+        ]
+      },
+      "tureFalse": {
+
+        "questions": [{
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "يتحدَّثُ الشاعرُ في النَّصِّ عنِ أهميةِ الكتابِ.",
+            "hint": "تكمُنُ الإجابةُ في أولِ بَيتٍ.",
+            "numberQuestion": 3,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+              "answer": false,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": true,
+                "check": false
+              }
+
+            ]
+          },
+          {
+            "title": "اختَرِ العلامةَ الصحيحةَ:",
+            "active": false,
+            "parag": "نفهَمُ من الأبياتِ أنَّ الشاعرَ يفتَخِرُ بالشبابِ.",
+            "hint": "أشادَ الشاعرُ في الأبياتِ بدَورِ الشبابِ.",
+            "numberQuestion": 4,
+            "typeQuestion": "true",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "answers": [{
+              "toChoose": "✓",
+              "answer": true,
+                "check": false
+              },
+              {
+                "toChoose": "✗",
+                "answer": false,
+                "check": false
+              }
+
+            ]
+          }
+
+        ]
+      },
+      "selectText": {
+        "questions": [{
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": " معنى (ما أُعِدَّ للحربِ من أسلِحةٍ): ........",
+            "sentence":"قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:15vw'></span> الْخَيْــــرُ فِــــي الشَّبَـــــابِ فَهُــــــمْ عَتَـــــــادُ قَوْمِـــــــــي <span style='margin-right:15vw'></span>  وَ الْحَــــــــــلُّ لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــوِدَادِ عـَـــــــــادُوا  <span style='margin-right:15.5vw'></span>  وَالْــــــــــوُدُّ كَالسَّحَـــــــــــابِ",
+            "correct": "قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:15vw'></span> الْخَيْــــرُ فِــــي الشَّبَـــــابِ فَهُــــــمْ <span class=showText>عَتَـــــــادُ</span> قَوْمِـــــــــي <span style='margin-right:15vw'></span>  وَ الْحَــــــــــلُّ لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــوِدَادِ عـَـــــــــادُوا  <span style='margin-right:15.5vw'></span>  وَالْــــــــــوُدُّ كَالسَّحَـــــــــــابِ",
+            "correctAnswer": ["عَتَـــــــادُ"],
+            "selectionText": "",
+            "hint": "كَلِمةٌ جَذْرُها (عَتُدَ).",
+            "numberQuestion": 5,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          },
+          {
+            "title": "حدِّدِ الإجابةَ من الأبياتِ",
+            "active": false,
+            "parag": "هاتِ من البيتِ الثاني تشبيهًا.",
+            "sentence":"قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:15vw'></span> الْخَيْــــرُ فِــــي الشَّبَـــــابِ فَهُــــــمْ عَتَـــــــادُ قَوْمِـــــــــي <span style='margin-right:15vw'></span>  وَ الْحَــــــــــلُّ لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــوِدَادِ عـَـــــــــادُوا  <span style='margin-right:15.5vw'></span>  وَالْــــــــــوُدُّ كَالسَّحَـــــــــــابِ",
+            "correct": "قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:15vw'></span> الْخَيْــــرُ فِــــي الشَّبَـــــابِ فَهُــــــمْ <span class=showText>عَتَـــــــادُ قَوْمِـــــــــي</span> <span style='margin-right:15vw'></span>  وَ الْحَــــــــــلُّ لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــوِدَادِ عـَـــــــــادُوا  <span style='margin-right:15.5vw'></span>  وَالْــــــــــوُدُّ كَالسَّحَـــــــــــابِ",
+            "correctAnswer": ["عَتَـــــــادُ قَوْمِـــــــــي"],
+            "selectionText": "",
+            "hint": "شبَّهَ الشاعرُ الشبابَ بالأسلحةِ التي أُعِدَّت للحربِ.",
+            "numberQuestion": 6,
+            "typeQuestion": "select",
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text"
+          }
+
+
+        ]
+      },
+      "punctuate": {
+        "questions": [{
+            "title": "اضغَطْ على الكَلِماتِ الخطأ، ثم اختَرِ التصويبَ المُناسِبَ.",
+            "active": false,
+            "numberQuestion": 7,
+            "sentence":"قَــــرَأْتُ فِــــــــي الْكِتَــــــابِ <span style='margin-right:19vw'></span> الْخَيْــــــــرُ  فِــــي الفَتَيات فهي عَتَــــــــــادُ قَوْمِـــــــــي <span style='margin-right:19vw'></span>  وَ المُشكِلة لِلصِّعَـــــــــابِ هُـــــمْ بِالْـــــــــوِدَادِ ذهَبوا  <span style='margin-right:19vw'></span>  وَالْــــــــوُدُّ كَالسَّحَــــــــــابِ",
+            "hint": ["هذه الكَلِمةِ نذكُرُ معَها أحيانًا: «في رَيَعانِ». ", "للغائبِ جمعِ المُذكَّرِ السالمِ.", "مُضادُّ (المُشكِلة).", "كَلِمةٌ تدُلُّ على العودةِ."],
+            "startTime": null,
+            "endTime": null,
+            "learningOutCome": null,
+            "numberOfTrial": 0,
+            "questionType": "text",
+            "answersType": "text",
+            "wrongWord": [{
+                "word": "الفَتَيات",
+                "correctAnswerTochoose": 1,
+                "chooses": [{
+                    "toChoose": "الشَّباب",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "الرِّجال ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "الأطفَال",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "فهي",
+                "correctAnswerTochoose": 2,
+                "chooses": [{
+                    "toChoose": "فهما  ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "فهم ",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "فهن",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "المُشكِلة",
+                "correctAnswerTochoose": 1,
+                "chooses": [{
+                    "toChoose": "الحَل ",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "الإجَابة ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "الرَّد",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              },
+              {
+                "word": "ذهَبوا",
+                "correctAnswerTochoose": 1,
+                "chooses": [{
+                    "toChoose": "عادُوا ",
+                    "answer": true,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "جلَسُوا ",
+                    "answer": false,
+                    "check": false
+                  },
+                  {
+                    "toChoose": "باتُوا",
+                    "answer": false,
+                    "check": false
+                  }
+
+                ]
+              }
+            ]
+          }
+
+        ]
+      }
+    }
+
+  ],
+  "scoureDoors": [0, 0, 0]
+
+}]

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thinking</title>
+    <link
+      rel="stylesheet"
+      href="../../../lib-native/thinking/style/style.css"
+    />
+    <link
+      rel="icon"
+      href="../../../lib-native/thinking/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <script src="../../../lib-native/thinking/js/vue.js"></script>
+    <script src="../../../lib-native/thinking/js/lottie-min.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+  </head>
+  <style></style>
+
+  <body>
+    <div id="thinking" data-urlpage="data">
+      <div class="loader" v-show="!isSuccess || !isLoaded"></div>
+      <div class="isSuccess" v-show="isSuccess && isLoaded">
+        <div class="aspect-box" id="container">
+          <div id="intro"></div>
+          <template v-if="isSuccess && isLoaded">
+            <div class="hint-screen" v-if="showHintQuestion">
+              <div class="hint-content">
+                <p
+                  class="hint"
+                  v-for="parag in (posts[0]?.informationLO || [])"
+                >
+                  <!-- {{ parag }} -->
+                </p>
+                <button @click="closeQuestionHint"></button>
+              </div>
+            </div>
+
+            <div v-if="!started" class="start-content">
+              <button @click="startGame"></button>
+            </div>
+
+            <button
+              v-if="showHint"
+              style="
+                width: 5%;
+                height: 14%;
+                position: absolute;
+                top: 25%;
+                left: 73%;
+                z-index: 20000;
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+              "
+              @click="closeHint"
+            ></button>
+
+            <div class="background"></div>
+            <div v-show="isIncomplete" class="incomplete-popup">
+              <div class="alert">
+                <p class="parag"></p>
+              </div>
+
+              <button
+                class="close-alert"
+                @click="isIncomplete = false"
+              ></button>
+            </div>
+            <div class="correct-answer-screen" v-if="showCorrectAnswerScreen">
+              <div class="answerScreen">
+                <div class="row">
+                  <div class="Show-question">
+                    <p class="question-text">
+                      {{ wrongAnswers[currentWrongAnswerIndex].question }}
+                    </p>
+                  </div>
+                  <div class="score">
+                    <p class="score-line">
+                      {{ score }} / {{ posts[0]?.items?.length }}
+                    </p>
+                  </div>
+                </div>
+                <div class="correct-answer-text">
+                  <div
+                    class="row"
+                    v-for="(row, rIndex) in wrongAnswers[currentWrongAnswerIndex].rows"
+                    :key="rIndex"
+                  >
+                    <template v-for="(item, idx) in row" :key="idx">
+                      <span v-if="item.kind === 'symbol'"
+                        >{{ item.value }}</span
+                      >
+                      <span v-else-if="item.kind === 'input'"
+                        >{{ item.valid }}</span
+                      >
+                    </template>
+                  </div>
+                </div>
+
+                <div class="nav-btns">
+                  <button
+                    class="arrow-btn left"
+                    @click="prevWrongAnswer"
+                    :disabled="currentWrongAnswerIndex === 0"
+                  ></button>
+
+                  <button
+                    class="arrow-btn right"
+                    @click="nextWrongAnswer"
+                    :disabled="currentWrongAnswerIndex === wrongAnswers.length - 1"
+                  ></button>
+                </div>
+
+                <button @click="retry" class="retry"></button>
+              </div>
+            </div>
+          </template>
+
+          <div class="safe-area" id="safeArea">
+            <template>
+              <div class="keys-container">
+                <!-- <div class="scroll-key" @mousedown="startDrag"></div> -->
+
+                <div class="main-buttons">
+                  <button
+                    v-for="(group, index) in buttonGroups"
+                    :key="index"
+                    class="main-btn"
+                    :class="[group.name, { active: activeGroup === index }]"
+                    @click="toggleGroup(index)"
+                  ></button>
+                </div>
+                <div class="keys-scroll-container">
+                  <div class="button-groups">
+                    <div class="button-grid" v-if="activeGroup !== null">
+                      <div
+                        v-for="(btn, index) in translatedButtons()"
+                        :key="index"
+                        :class="['calc-button', btn.class]"
+                        @click="handleButton(btn)"
+                      >
+                        <div
+                          v-if="btn.class.includes('mean')"
+                          class="mean"
+                        ></div>
+                        <div
+                          v-if="btn.class.includes('fraction')"
+                          class="fraction-img"
+                        ></div>
+                        <div
+                          v-if="btn.class.includes('mixed')"
+                          class="mixed-img"
+                        ></div>
+
+                        <div
+                          v-if="btn.class.includes('power')"
+                          class="power"
+                        ></div>
+
+                        <div v-else class="text">{{ btn.text }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="language"
+                  @click="toggleLanguage"
+                  :class="currentLang"
+                  v-if="buttonGroups[activeGroup]?.name == 'measurment' "
+                ></div>
+              </div>
+            </template>
+            <div class="answerArea">
+              <!-- <div class="scroll-bar">
+                <div
+                  class="scroll-bar-thumb"
+                  ref="thumb"
+                  @mousedown="startDrag"
+                ></div>
+              </div> -->
+
+              <div class="flexColoumn">
+                <div class="flex m5v">
+                  <div class="text">
+                    <p class="parag-q description animate-in">
+                      {{ currentDescription }}
+                    </p>
+                    <div
+                      v-for="(row, rIndex) in posts[0]?.items?.[counter]?.rows"
+                      :key="rIndex"
+                      class="flexRow"
+                    >
+                      <template v-for="(item, idx) in row" :key="idx">
+                        <div
+                          v-if="item.kind === 'input'"
+                          @click="setActiveInput(getGlobalIndex(rIndex, idx))"
+                          :class="[
+  'input',
+  { 
+    active: activeIndex === getGlobalIndex(rIndex, idx),
+    wrong: wrongInputs.includes(getGlobalIndex(rIndex, idx))
+  }
+]"
+                        >
+                          <template
+                            v-if="inputs[getGlobalIndex(rIndex, idx)]?.type === 'mixed'"
+                          >
+                            <div class="fraction mixed-number">
+                              <input
+                                type="text"
+                                class="whole inputfraction"
+                                v-model="inputs[getGlobalIndex(rIndex, idx)].whole"
+                                @focus="inputs[getGlobalIndex(rIndex, idx)].activePart='whole'"
+                              />
+                              <div class="fraction-part">
+                                <input
+                                  type="text"
+                                  class="numerator inputfraction"
+                                  v-model="inputs[getGlobalIndex(rIndex, idx)].numerator"
+                                  @focus="inputs[getGlobalIndex(rIndex, idx)].activePart='numerator'"
+                                />
+                                <div class="fraction-line"></div>
+                                <input
+                                  type="text"
+                                  class="denominator inputfraction"
+                                  v-model="inputs[getGlobalIndex(rIndex, idx)].denominator"
+                                  @focus="inputs[getGlobalIndex(rIndex, idx)].activePart='denominator'"
+                                />
+                              </div>
+                            </div>
+                          </template>
+
+                          <template
+                            v-else-if="inputs[getGlobalIndex(rIndex, idx)]?.type === 'fraction'"
+                          >
+                            <div class="fraction">
+                              <input
+                                type="text"
+                                class="numerator inputfraction"
+                                v-model="inputs[getGlobalIndex(rIndex, idx)].numerator"
+                                @focus="inputs[getGlobalIndex(rIndex, idx)].activePart='numerator'"
+                              />
+                              <div class="fraction-line"></div>
+                              <input
+                                type="text"
+                                class="denominator inputfraction"
+                                v-model="inputs[getGlobalIndex(rIndex, idx)].denominator"
+                                @focus="inputs[getGlobalIndex(rIndex, idx)].activePart='denominator'"
+                              />
+                            </div>
+                          </template>
+
+                          <template
+                            v-else-if="inputs[getGlobalIndex(rIndex, idx)]?.type === 'mean'"
+                          >
+                            <div class="mean-box">
+                              <div class="xbar">
+                                (
+                                <div class="values">
+                                  <template
+                                    v-for="(val, vIndex) in inputs[getGlobalIndex(rIndex, idx)].values"
+                                    :key="vIndex"
+                                  >
+                                    <input
+                                      class="inputMean"
+                                      type="text"
+                                      v-model="inputs[getGlobalIndex(rIndex, idx)].values[vIndex]"
+                                      @input="autoAddInputForIndex(getGlobalIndex(rIndex, idx), vIndex)"
+                                      :style="{ width: item.width || '20%', height: item.height || '10%' }"
+                                    />
+                                    <div
+                                      v-if="vIndex < inputs[getGlobalIndex(rIndex, idx)].values.length - 1"
+                                    >
+                                      ,
+                                    </div>
+                                  </template>
+                                </div>
+                                )̅
+                              </div>
+                            </div>
+                          </template>
+
+                          <template
+                            v-else-if="inputs[getGlobalIndex(rIndex, idx)]?.type === 'power'"
+                          >
+                            <div class="power-box">
+                              <input
+                                type="text"
+                                class="base"
+                                v-model="inputs[getGlobalIndex(rIndex, idx)].base"
+                                :style="{ width: item.width || '20%', height: item.height || '10%' }"
+                              />
+                              <sup>
+                                <input
+                                  type="text"
+                                  class="exponent"
+                                  v-model="inputs[getGlobalIndex(rIndex, idx)].exponent"
+                                  :style="{ width: item.expWidth || '20%', height: item.expHeight || '10%' }"
+                                />
+                              </sup>
+                            </div>
+                          </template>
+
+                          <template v-else>
+                            <input
+                              type="text"
+                              v-model="inputs[getGlobalIndex(rIndex, idx)]"
+                              :style="{ width: item.width || '60px', height: item.height || '30px' }"
+                            />
+                          </template>
+
+            
+                        </div>
+
+                        <span
+                          v-else-if="item.kind === 'symbol'"
+                          class="equation-symbol"
+                        >
+                          {{ item.value }}
+                        </span>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="board">
+              <p class="questionText rtl question animate-in">
+                {{ currentQuestion }}
+              </p>
+            </div>
+
+            <div
+              class="music"
+              :class="isMuted ? 'mute' : 'unmute'"
+              @click="toggleMute"
+            ></div>
+
+            <div class="info">
+              <button @click="toggleHint"></button>
+            </div>
+
+            <div class="check">
+              <button
+                @click="checkAnswer"
+                :disabled="!canCheck() || !isChecked"
+                :class="{ active: isChecked }"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="endScreen"
+          class="end-screen"
+          v-show="quizFinished"
+          :class="{ 'show': quizFinished }"
+        >
+          <div id="feedbackAnim"></div>
+
+          <div class="endscreen-content">
+            <div class="score-line">
+              <p>{{ scorePercentage() }} / 100</p>
+            </div>
+            <div v-if="feedbackMessage" class="feedback-text">
+              {{ feedbackMessage }}
+            </div>
+            <button
+              @click="showCorrectAnswerScreen = true"
+              class="showAnswer"
+            ></button>
+            <button @click="retry" class="retry"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="../../../lib-native/thinking/js/main.js"
+      type="module"
+    ></script>
+  </body>
+</html>

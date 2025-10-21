@@ -1,0 +1,300 @@
+[
+  {
+    "id": "mth_4r_2a_08_01_04",
+    "SubType": "Input",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "BloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "loTargets": null,
+    "numberOfquestion": 6,
+    "hint": true,
+    "questionAudio": true,
+    "question_two_Audio": true,
+    "upper": true,
+    "isEng": false,
+    "informationLO": "أكمل",
+    "items": [
+      {
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title": "الاجابة 2 و 5 و 7  بالترتيب",
+        "inputs": [{
+            "numOfInput": 1,
+            "valid": ["2"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["5"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["7"]
+          }
+        ],
+        "choose": [
+          {
+            "select": "3",
+            "answer": false
+          },
+          {
+            "select": "2",
+            "answer": true
+          },
+          {
+            "select": "6",
+            "answer": false
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title": "الاجابة 2 او 3 او 4  تبادل",
+        "inputs": [{
+            "numOfInput": 3,
+            "valid": ["2", "3", "4"]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          }
+        ],
+        "choose": [
+          {
+            "select": "2",
+            "answer": true
+          },
+          {
+            "select": "5",
+            "answer": false
+          },
+          {
+            "select": "6",
+            "answer": false
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title": "الاجابة 21 او 31",
+        "inputs": [{
+            "numOfInput": 1,
+            "valid": ["31", "21"]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          }
+        ],
+        "choose": [
+          {
+            "select": "2",
+            "answer": false
+          },
+          {
+            "select": "7",
+            "answer": false
+          },
+          {
+            "select": "21",
+            "answer": true
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title": "الاجابة 44 و 45 بالترتيب",
+        "inputs": [{
+            "numOfInput": 1,
+            "valid": ["44"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["45"]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          }
+        ],
+        "choose": [
+          {
+            "select": "44",
+            "answer": true
+          },
+          {
+            "select": "7",
+            "answer": false
+          },
+          {
+            "select": "8",
+            "answer": false
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title": "الاجابة 44 او 45   & الاجابة 5 او6",
+        "inputs": [{
+            "numOfInput": 1,
+            "valid": ["44","45"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["5","6"]
+          },
+          {
+            "numOfInput": 0,
+            "valid": [""]
+          }
+        ],
+        "choose": [
+          {
+            "select": "2",
+            "answer": false
+          },
+          {
+            "select": "44",
+            "answer": true
+          },
+          {
+            "select": "8",
+            "answer": false
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "id": 1,
+        "active": true,
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "numberOfquestion": 0,
+        "correctCounter": 0,
+        "numOfAttempts": 0,
+        "numberInputs": 0,
+        "counterCorrectQuestion": 0,
+        "title":"الاجابة 3 و 6 و9 بالترتيب",
+        "inputs": [{
+            "numOfInput": 1,
+            "valid": ["3"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["6"]
+          },
+          {
+            "numOfInput": 1,
+            "valid": ["9"]
+          }
+        ],
+        "choose": [
+          {
+            "select": "3",
+            "answer": true
+          },
+          {
+            "select": "7",
+            "answer": false
+          },
+          {
+            "select": "8",
+            "answer": false
+          }
+        ]
+      }
+    ]
+  }
+]

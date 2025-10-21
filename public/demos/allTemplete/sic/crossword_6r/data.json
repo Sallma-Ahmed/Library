@@ -1,0 +1,72 @@
+[{
+  "activeClass": false,
+  "questionNumber": 1,
+  "conditionState": "Col",
+  "numberStateRow": 3,
+  "numberStateCol": 7,
+  "wordId": "البابليون",
+  "quiz": "قام .... بإنشاء الكتابة المسمارية في العراق.",
+  "wonderFul": "<span> ممتاز </span> <br> قام  <span>البابليون</span>  بإنشاء الكتابة المسمارية في العراق."
+
+}, {
+  "questionNumber": 2,
+  "activeClass": false,
+  "conditionState": "Row",
+  "numberStateRow": 5,
+  "numberStateCol": 5,
+  "wordId": "الحشرات",
+  "quiz": "تنتمي الخنافس المضيئة إلى ... .",
+  "wonderFul": "<span> أحسنْتَ </span> <br>تنتمي الخنافس المضيئة إلى <span>الحشرات</span>."
+ 
+}, {
+  "questionNumber": 3,
+  "activeClass": false,
+  "conditionState": "Row",
+  "numberStateRow": 6,
+  "numberStateCol": 4,
+  "wordId": "البردي",
+  "quiz": "استخدم المصريون القدماء ورق ... في الكتابة.",
+  "wonderFul": "<span> رائعٌ </span> <br>استخدم المصريون القدماء ورق <span> البردي</span> في الكتابة."  
+ 
+ 
+}, {
+  "questionNumber": 4,
+  "activeClass": false,
+  "conditionState": "Col",
+  "numberStateRow": 7,
+  "numberStateCol": 8,
+  "wordId": "اللغة",
+  "quiz": "يتميز البشر عن الحيوانات باستخدام .... في القراءة والكتابة.",
+  "wonderFul": "<span> ممتاز </span> <br> يتميز البشر عن الحيوانات باستخدام <span>اللغة</span> في القراءة والكتابة. "
+
+}, {
+  "questionNumber": 5,
+  "activeClass": false,
+  "conditionState": "Col",
+  "numberStateRow": 9,
+  "numberStateCol":3,
+  "wordId": "سلوكي",
+  "quiz": "تغيُّر نمط ومضات الخنافس المضيئة يُعتبر تكيفًا .... .",
+  "wonderFul": "<span> أحسنْتَ </span> <br> تغيُّر نمط ومضات الخنافس المضيئة يُعتبر تكيفًا <span> سلوكي</span>. "
+
+}, {
+  "questionNumber": 6,
+  "activeClass": false,
+  "conditionState": "Row",
+  "numberStateRow": 11,
+  "numberStateCol": 1,
+  "wordId": "الهيروغليفية",
+  "quiz": "كان نظام الكتابة ....... في مصر يتكون من 700 رمز.</span>",
+  "wonderFul": "<span> رائعٌ </span> <br> كان نظام الكتابة  <span> الهيروغليفية  </span>في مصر يتكون من 700 رمز."
+
+}, {
+  "questionNumber": 7,
+  "activeClass": false,
+  "conditionState": "Row",
+  "numberStateRow": 12,
+  "numberStateCol": 1,
+  "wordId": "ضوء",
+  "quiz": "تصدر الخنافس المضيئة ..... من أجل التحذير من قدوم حيوانات مفترسة أو لجذب الجنس الآخر.",
+  "wonderFul": "<span> رائعٌ </span> <br>تصدر الخنافس المضيئة <span>ضوء </span> من أجل التحذير من قدوم حيوانات مفترسة أو لجذب الجنس الآخر."
+ 
+}]

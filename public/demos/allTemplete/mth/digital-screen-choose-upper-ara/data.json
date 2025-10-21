@@ -1,0 +1,326 @@
+[
+  {
+    "id": "mth_5r_2a_05_03_02",
+    "SubType": "Choose",
+    "subjectId": "",
+    "conceptId": "",
+    "unitId": "",
+    "lessonId": "",
+    "title": "",
+    "keywords": "",
+    "learningObjectives": "",
+    "BloomLevels": [],
+    "type": "",
+    "loDegree": null,
+    "UserDegree": 0,
+    "startTime": "",
+    "endTime": "",
+
+    "counterCorrect": 0,
+    "LOcorrectcounter": 0,
+    "loTargets": null,
+    "numberOfquestion": 6,
+
+    "hint": true,
+    "questionAudio": true,
+    "upper": true,
+    "isEng": false,
+    "informationLO":["اضغط على الإجابات الصحيحة"],
+    "items": [
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["اختر الإجابات الصحيحة  (<span class='number'>1 , 2</span>)"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [1],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة صحيحة",
+            "paragraph2": "",
+            "right": false,
+            "checked": false
+          },
+          
+          {
+            "numAnswer": 3,
+            "paragraph1": " ",
+            "paragraph2": "خاطئة",
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 4,
+            "paragraph1": " ",
+            "paragraph2": "خاطئة",
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 5,
+            "paragraph1": " ",
+            "paragraph2": "خاطئة",
+            "right": false,
+            "checked": false
+          }
+        ]
+      },
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["السؤال الثاني"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [2],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة خاطئة",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 2,
+            "paragraph1": "إجابة صحيحة",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 3,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          }
+        ]
+      }
+      ,
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["السؤال الثالث"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [3],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 2,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 3,
+            "paragraph1": "إجابة صحيحة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          }
+        ]
+      }
+      ,
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["السؤال الرابع"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [1],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة صحيحة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 2,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 3,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          }
+        ]
+      }
+      ,
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["السؤال الخامس"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [1],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة صحيحة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 2,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 3,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          }
+        ]
+      }
+      ,
+      {
+        "active": false,
+        "id": 1,
+        "paragraph1": ["السؤال السادس"],
+        "fraction1": [""],
+        "paragraph2": [],
+        "correctAnswer": [2],
+
+        "answerSelect": false,
+        "counter": 0,
+        "type": "choose",
+        "numberOfTrial": 0,
+        "questionlevel": "",
+        "questionType": "text",
+        "answersType": "text",
+        "startTime": "",
+        "endTime": "",
+        "BloomLevel": 3,
+        "answers": [
+          {
+            "numAnswer": 1,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 2,
+            "paragraph1": "إجابة صحيحة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          },
+          {
+            "numAnswer": 3,
+            "paragraph1": "إجابة خاطئة ",
+            "fraction1": [""],
+            "paragraph2": "",
+            "fraction2": [""],
+            "right": false,
+            "checked": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../lib-native/graph/js/vue.js"></script>
+    <link rel="stylesheet" href="../../../lib-native/graph/style/lo.css">
+</head>
+
+<body>
+    <div id="coordinate" data-urlpage="data" >
+        <div class="controls">
+            <button id="zoomIn" @click="zoomIn()">+</button>
+            <button id="zoomOut" @click="zoomOut()">-</button>
+        </div>
+        <svg id="graph"  @wheel="onWheel($event)" @mousedown="startDrag($event)" @mousemove="onDrag($event)" @mouseup="endDrag()"></svg>
+    </div>
+
+    <script type="module" src="../../../lib-native/graph/js/main.js"></script>
+
+</body>
+
+</html>

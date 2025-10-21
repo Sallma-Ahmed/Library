@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../lib-native/coordinate/js/vue.js"></script>
+    <link rel="stylesheet" href="../../../lib-native/coordinate/style/lo.css">
+</head>
+
+<body>
+    <div class="main" id="coordinate" data-urlpage="data">
+        <div class="start" v-show="!startLo && !hintScreen && !feedBack">
+            <div class="button" @click="startButton()"></div>
+        </div>
+        <div class="hitnScreen" v-show="startLo && hintScreen && !feedBack">
+            <div class="border" v-if="isSuccess">
+                <div class="close" @click="closeHint()"></div>
+                <p v-for="parag in this.posts[0].hint">{{parag}}</p>
+            </div>
+        </div>
+        <div class="content" v-show="startLo && isSuccess && !hintScreen && !feedBack">
+            <template v-if="isSuccess">
+                <div class="question" v-for="question in this.posts[0].questions" :class="{'active': question.active}">
+                    <p v-for="parag in question.title">
+                        {{parag}}
+                    </p>
+                </div>
+                <template v-if="nextStepQuestion">
+                    <div class="questionInput" v-for="question in this.posts[0].questions"
+                        :class="{'active': question.active}">
+                        <div class="flex">
+                            <p>{{question.parag1}}</p>
+                            <template v-for="(input, i) in question.inputs[0].numOfInput">
+                                <input type="text" class="input emptyInput" index="0" :indexInput="i"
+                                    @change="changeValue();" @keyup="maxLength($event,i)">
+                            </template>
+                            <p>{{question.parag2}}</p>
+                            <!-- <template v-if="question.inputs.length > 1">
+                                <template v-for="(input, i) in question.inputs[1].numOfInput">
+                                    <input type="text" class="input emptyInput" index="1" :indexInput="i"
+                                        @change="changeValue();" @keyup="maxLength($event,i)">
+                                </template>
+                            </template> -->
+
+                        </div>
+
+                    </div>
+                </template>
+            </template>
+            <div class="controls">
+                <div class="group">
+                    <div class="btn reset" @click="resetPoints()"
+                        :class="{'disabled' : checkedDraw ||  allActions.length == 0 }"></div>
+                    <div class="btn redo" @click="redoLastPoint()"
+                        :class="{'disabled' : checkedDraw ||  HistroyActions.length == 0 }"></div>
+                    <div class="btn undo" @click="removeLastPoint()"
+                        :class="{'disabled' : checkedDraw || allActions.length == 0 }"> </div>
+                    <div class="btn info"></div>
+                </div>
+                <div class="group">
+                    <div class="btn twoLine disabled"></div>
+                    <div class="btn line" @click="enableDrawLine()"
+                        :class="{'active' : enableLine , 'disabled' : checkedDraw}"></div>
+                    <div class="btn draw" @click="enabledDrawPoint()"
+                        :class="{'active' : enablePoint, 'disabled' : checkedDraw }"> </div>
+                    <div class="btn drag" @click="enabledDrag()"
+                        :class="{'active' : enableDrag, 'disabled' : checkedDraw }"></div>
+                </div>
+            </div>
+            <div class="controls right">
+                <div class="group right">
+                    <template v-if="!nextStepQuestion">
+                        <div class="btn check" @click="check()" :class="{'disabled' : checkedDraw }"> </div>
+                        <div class="btn showAnswer" @click="drawRightShape()" :class="{'disabled':!checkedDraw}"> </div>
+                    </template>
+                    <template v-if="nextStepQuestion">
+                        <div class="btn checkQuestion" @click="checkInputALL()"
+                            :class="{'disabled':checkedInput || !nextStepQuestion }"> </div>
+                        <div class="btn showAnswer" @click="showAnswerInput()" :class="{'disabled':!checkedInput}">
+                        </div>
+                    </template>
+
+                    <div class="btn zoomOut" @click="zoomOut()" :class="{'disabled' : checkedDraw }"></div>
+                    <div class="btn zoomInt" @click="zoomIn()" :class="{'disabled' : checkedDraw }"></div>
+
+
+                </div>
+            </div>
+            <div id="graph-container">
+                <!-- <svg id="graph" :viewBox="`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`"
+                    @mousedown="startDrag($event)" @mousemove="dragging($event)" @mouseup="endDrag()"
+                    @mouseleave="endDrag()" @click="addPoint($event)">
+                    <g id="v-lines"></g>
+                    <g id="h-lines"></g>
+
+                    <line class="axis" x1="-100" y1="0" x2="100" y2="0" />
+                    <line class="axis" x1="0" y1="-100" x2="0" y2="100" />
+
+                    <g id="labels"></g>
+
+                    <g id="points"></g>
+                </svg> -->
+                <svg id="graph" :class="{'grab':enableDrag,'pointer':enablePoint }" @wheel="onWheel($event)" @mousedown="startDrag($event)" @mousemove="onDrag($event)"
+                    @mouseup="endDrag()" @mouseleave="endDrag()" @click="addPoint($event)"></svg>
+
+            </div>
+        </div>
+        <div class="feedBackScreen">
+            <div class="border" v-show="feedBack">
+                <div class="reload" @click="home()"></div>
+                <div class="degree">
+                    <p>{{feedBackDegree}}/100</p>
+                </div>
+
+                <div class="image">
+                    <img :src="feedBackImage" alt="">
+                </div>
+
+                <p>{{feedBackText}}</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="module" src="../../../lib-native/coordinate/js/main.js"></script>
+
+</body>
+
+</html>

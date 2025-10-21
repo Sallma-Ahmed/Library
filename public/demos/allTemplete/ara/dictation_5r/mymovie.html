@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictation</title>
+    <link rel="icon" href="../../../lib-native/dictation_5r/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../../lib-native/dictation_5r/css/style.css" />
+
+    <script src="../../../lib-native/dictation_5r/js/lottie-min.js"></script>
+    <script src="../../../lib-native/dictation_5r/js/vue-min.js"></script>
+    <script src="../../../js/submit_sender.js"></script>
+
+
+</head>
+
+<body>
+    <div id="bg_body">
+        <div class="logo"></div>
+        <div class="first_bg"></div>
+        <div id="buttonClose"></div>
+        <div class="shadow"></div>
+        <div id="Dictation" data-urlpage="dictation">
+            <div class="loader" v-show=" !this.isSuccess || !this.isLoaded"></div>
+            <div class="isSuccess" v-show=" this.isSuccess && this.isLoaded">
+                <div id="StartPlay" :class="{'disabled' : this.posts[0].start}" @click="clickstart()"></div>
+                <audio id="audio"></audio>
+                <div id="idTest"></div>
+                <div id="infoScreen"
+                    :class="[{'disabled' : this.posts[0].start}, {'screen_content' : this.posts[0].screen_content} ]">
+                    <div id="content_active" class="none">
+                        <ul class="info" v-if="this.posts[0].show_info_content"
+                            :class="{'show_info_content' : this.posts[0].show_info_content}">
+                            <li v-for="(parag , index) in this.posts[0].info_start">{{parag}}</li>
+                        </ul>
+                        <div id="timeTest" :class="{'show_info_content' : !this.posts[0].show_info_content}"></div>
+                        <div class="next_time">
+                            <div class="timing_place">
+                                <p id="timing"
+                                    :class="[!this.posts[0].show_info_content?'timer':'' , {'show_info_content' : this.posts[0].show_info_content}]">
+                                </p>
+                            </div>
+                            <button id="infoNext" @click="click_show_info_content()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="answer_player">
+                    <div class="show_screen">
+                        <div>
+                            <div class="none" :class="item.resultWord ? 'Right' : 'Wrong'"
+                                v-for="(item, i) in this.posts[0].comparison_player" v-if="item.answerShow"
+                                v-on:click="click_letter($event, i)" :id="'click_letter_'+i">
+                                <p>{{item.doWord}}</p>
+                                <div class="box_hint">
+                                    <div class="speech-bubble">
+                                        <p>{{item.originalWord}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="keybord">
+                        <div id="t_key">
+                            <div :class="this.posts[0].language? 'Ara' : 'Eng'">
+                                <div id="titleKey">
+                                    <p>{{this.posts[0].comparison_player[this.posts[0].countItem].doWord}}</p>
+                                    <div class="sound_repeat" @click="sound_word()"></div>
+                                </div>
+                                <div class="message_place">
+                                    <div class="bubble bubble-bottom-left">
+                                        <p>يُرْجَى اخْتِيَارُ اللُّغَةِ الْعَرَبِيَّةِ واسْتِخْدَامُ حُرُوفِهَا</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="keybord_control">
+                            <ul>
+                                <li v-for="(key , index) in this.posts[0].keybord"
+                                    v-on:click="answer_player_letter($event, key)" :class="'center_key'+index ">
+                                    {{key}}
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li id="letter_key_5_0" @click="remove_letter()"></li>
+                                <li id="letter_key_5_1" @click="answer_click()"></li>
+                                <li id="letter_key_5_2" @click="answer_click()">{{this.posts[0].keybord_5}}</li>
+                            </ul>
+                        </div>
+                        <div id="endScreen">
+                            <!-- <div class="title">{{this.posts[0].title_endScreen}}</div> -->
+                            <!-- <div class="ruselt"> -->
+                            <!-- <div class="rus answers">{{ this.posts[0].count_true}}</div>
+                            <div class="slash"></div>
+                            <div class="rus question">{{this.posts[0].partArray.length }}</div> -->
+
+                            <!-- </div> -->
+
+                            <div id="evaluation_progress">
+                                <div id="progressbar">
+                                    <div class="number_of_true">
+                                        <p>{{ this.posts[0].count_true}}</p>
+                                        <span>/</span>
+                                        <p>{{this.posts[0].partArray.length }}</p>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="evaluation_text">
+                                    <p>{{this.posts[0].evaluation }}</p>
+                                </div>
+                            </div>
+                            <div class="Buttons">
+                                <div class="correctText" @click="reload()"></div>
+                                <div class="Reload" @click="reload()"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="finshed">
+                    <div class="Buttons">
+                        <div id="finshed_but" @click="reload()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../lib-native/dictation_5r/js/main.js"></script>
+    <script src="../../../lib-native/dictation_5r/js/animation.js"></script>
+
+</body>
+
+</html>
