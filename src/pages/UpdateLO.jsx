@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Navbar from "../components/navbar";
-import "../styles/CreateNativeLO.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
 import Select from "react-select";
+import "../styles/CreateNativeLO.css";
 
-export default function CreateNativeLO() {
-  const user = {
-    name: "Salma Ahmed",
-    avatar: "/images/icon.png",
-  };
+import templatesData from "../json/data.json";
 
+export default function UpdateLO() {
+  const { id } = useParams();
   const navigate = useNavigate();
-  const { category } = useParams();
 
-  const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const template = templatesData.find((item) => item.id === Number(id));
 
   const subjectOptions = [
     { value: "Arabic", label: "Arabic" },
@@ -24,35 +21,38 @@ export default function CreateNativeLO() {
     { value: "Social", label: "Social Studies" },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [selectedSubjects, setSelectedSubjects] = useState([]);
 
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-
-    const learningObjective = {
-      ...data,
-      subjects: selectedSubjects.map((subject) => subject.value),
-    };
-
-    console.log(" Created LO:", learningObjective);
-    localStorage.setItem("createdLO", JSON.stringify(learningObjective));
-    alert("Learning Objective created!");
-    navigate("/templates/native");
-  };
+  useEffect(() => {
+    if (template?.subject) {
+      setSelectedSubjects([
+        { value: template.subject, label: template.subject },
+      ]);
+    }
+  }, [template]);
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate(`/templates/${category || "native"}`);
+    navigate(-1);
+  };
+
+  const handleSave = (e) => {
+    e.preventDefault();
+
+    const updatedLO = {
+      loName: e.target.loName.value,
+      creator: e.target.creator.value,
+      subjects: selectedSubjects.map((subj) => subj.value),
+    };
+
+    console.log("Updated LO:", updatedLO);
+    alert(`Changes for LO ${template.name} saved!`);
+    navigate("/templates/native");
   };
 
   return (
     <div>
-      <Navbar
-        user={user}
-        onProfileClick={() => alert("Profile clicked")}
-        onLogout={() => alert("Logged out")}
-      />
+      <Navbar user={{ name: "Salma Ahmed", avatar: "/images/icon.png" }} />
 
       <section className="content">
         <nav className="breadcrumb">
@@ -60,20 +60,26 @@ export default function CreateNativeLO() {
           <span className="separator">-</span>
           <Link to="/templates/native">Templates</Link>
           <span className="separator">-</span>
-          <span className="active">Create Native LO</span>
+          <span className="active">Update LO</span>
         </nav>
 
         <div className="title">
-          <h1>Create Native LO</h1>
+          <h1>Update {template?.name}</h1>
           <p className="text">
-            Add a new learning objective developed internally by the team.
+            Update learning objective developed internally by the team.
           </p>
         </div>
 
-        <form className="create-form" onSubmit={handleSubmit}>
+        <form className="create-form" onSubmit={handleSave}>
           <label>
-            Learning Objectives Name:
-            <input type="text" name="loName" placeholder="Name" required />
+            Learning Objective Name:
+            <input
+              type="text"
+              name="loName"
+              defaultValue={template?.name}
+              placeholder="Name"
+              required
+            />
           </label>
 
           <label>
@@ -100,14 +106,14 @@ export default function CreateNativeLO() {
             <input
               type="text"
               name="creator"
-              placeholder="Developer Name"
+              defaultValue={template?.creator}
               required
             />
           </label>
 
           <div className="button-row">
             <button type="submit" className="submit-btn">
-              Create
+              Save Changes
             </button>
             <button className="cancel-btn" onClick={handleCancel}>
               Cancel

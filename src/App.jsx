@@ -1,12 +1,15 @@
-import { BrowserRouter, Routes, Route ,useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 
 import StartPage from "./pages/StartPage";
 import TemplatesPage from "./pages/TemplatesPage";
 import TemplateDetails from "./pages/TemplatesDetails";
 import EnvironmentsPage from "./pages/EnvironmentsPage";
-import EnvironmentDemoPage from "./pages/EnvironmentDemoPage"; 
+import EnvironmentDemoPage from "./pages/EnvironmentDemoPage";
 import CreateNativeLO from "./pages/CreateNativeLO";
 import CreateEnvironment from "./pages/CreateEnvironment";
+import UpdateLO from "./pages/UpdateLO";
+        import EditEnvironment from "./pages/EditEnvironment"; 
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,10 +17,17 @@ export default function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/templates/:category" element={<TemplatesPage />} />
         <Route path="/template/:id" element={<TemplateDetails />} />
-                <Route path="/environments/:id" element={<EnvironmentsPage />} />
-                        <Route path="/environments/:id/:envId" element={<EnvironmentDemoPage />} />
-                        <Route path="/create" element={<CreateNativeLO />} />
-                        <Route path="/createEnvironment" element={<CreateEnvironment />} />
+        <Route path="/environments/:id" element={<EnvironmentsPage />} />
+        <Route
+          path="/environments/:id/:envId"
+          element={<EnvironmentDemoPage />}
+        />
+        <Route path="/create" element={<CreateNativeLO />} />
+        <Route path="/createEnvironment" element={<CreateEnvironment />} />
+
+<Route path="/editEnvironment/:templateId/:envId" element={<EditEnvironment />} />
+
+<Route path="/update/:id" element={<UpdateLO />} />
 
       </Routes>
     </BrowserRouter>
