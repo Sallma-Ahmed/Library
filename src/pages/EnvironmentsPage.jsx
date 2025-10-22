@@ -2,9 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import data from "../json/data.json";
 import Navbar from "../components/navbar";
 import { FaEdit } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 
 export default function EnvironmentsPage() {
-  const { id } = useParams();
+const { category, id } = useParams();
   const navigate = useNavigate();
 
   const template = data.find((t) => t.id === Number(id));
@@ -34,23 +35,35 @@ export default function EnvironmentsPage() {
 
       <section className="content">
         <div className="title">
-          <nav className="breadcrumb">
-            <a href="/">Library</a> <span className="separator">-</span>
-            <a href="/">templates</a> <span className="separator">-</span>
-            <a href={`/environments/${id}`} className="active">
-              Environments
-            </a>
-          </nav>
+  <nav className="breadcrumb">
+  <Link to="/">Library</Link>
+  <span className="separator">-</span>
 
-          <div className="row">
-            <div className="coloumn">
-              <h1>{template.name} Environments</h1>
-              <p className="sub-title">
-                Choose the environments of objectives you want to see details.
-              </p>
-            </div>
-            <button className="create-btn">+ Create Environment</button>
-          </div>
+  <Link to={`/templates/${category}`}>
+    Templates
+  </Link>
+  <span className="separator">-</span>
+
+  <Link to={`/environments/${id}`} className="active">
+    Environments
+  </Link>
+</nav>
+<div className="row">
+  <div className="coloumn">
+    <h1>{template.name} Environments</h1>
+    <p className="sub-title">
+      Choose the environments of objectives you want to see details.
+    </p>
+  </div>
+
+  <button
+    className="create-btn"
+onClick={() => navigate("/createEnvironment")}
+  >
+    + Create Environment
+  </button>
+</div>
+
         </div>
 
         <div className="template-details">

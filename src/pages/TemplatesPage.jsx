@@ -4,10 +4,12 @@ import data from "../json/data.json";
 import TemplatesCard from "../components/templatesCard";
 import Navbar from "../components/navbar";
 import "../styles/TemplatesPage.css";
+import { useNavigate } from "react-router-dom";
 
 const subjects = ["All", "Arabic", "English", "Rel", "Mth", "Sci", "Social"];
 
 export default function TemplatesPage() {
+    const navigate = useNavigate();
   const { category } = useParams();
   const [selectedSubject, setSelectedSubject] = useState("All");
 
@@ -61,7 +63,7 @@ export default function TemplatesPage() {
                 frameworks.
               </p>
             </div>
-            <button className="create-btn">+ Create Native LO</button>
+            <button className="create-btn" onClick={() => navigate("/create")}>+ Create LO</button>
           </div>
 
           <div className="subject-btn">

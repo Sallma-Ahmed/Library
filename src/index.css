@@ -72,7 +72,9 @@ body {
   min-height: 100vh;
   background-color: #f9fafb;
 }
-
+.template-card  {
+width: 100%;
+}
 .template-card h1 {
   font-size: 2.2rem;
   font-weight: 700;
