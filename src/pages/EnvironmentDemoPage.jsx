@@ -44,7 +44,7 @@ export default function EnvironmentDemoPage() {
           <nav className="breadcrumb">
             <a href="/">Library</a> <span className="separator">-</span>
             <a href="/">templates</a> <span className="separator">-</span>
-               <a href={`/environments/${id}`} className="active">
+               <a href={`/environments/${id}`} >
               Environments
             </a><span className="separator">-</span>
             <a href={`/environments/${id}`} className="active">
