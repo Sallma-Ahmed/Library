@@ -1,0 +1,142 @@
+
+.create-form input {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  background-color: #397CA9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #2f6b8e;
+}
+.create-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem; 
+  margin-top: 20px;
+  max-width: 100%; 
+}
+
+.create-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+}
+
+.create-form input,
+.create-form select {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.button-row {
+  grid-column: span 2;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background-color: #397ca9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #2f6b8e;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background-color: #aaa;
+}
+.submit-btn {
+  background: #010C30;
+  width: 171px;
+  height: 48px;
+  gap: 8px; 
+  opacity: 1;
+  border-radius: 100px;
+  padding: 8px 16px; 
+  color: white; 
+  border: none;
+  cursor: pointer;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.cancel-btn {
+  width: 171px;
+  height: 48px;
+  display: flex;          
+  gap: 8px;
+  opacity: 1;
+  border-radius: 100px;
+  border-width: 1px;
+  border: 1px solid var(--Primary, #010C30);
+  padding: 8px 16px;      
+  background: transparent; 
+  color: var(--Primary, #010C30);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.react-select__multi-value {
+  width: fit-content;
+  height: 25px;
+  gap: 4px;
+  opacity: 1;
+  border-radius: 100px !important;
+  padding: 4px 16px;
+  color: #ffff !important;
+  background-color: #010C30 !important; 
+}
+
+.react-select__multi-value__label {
+  color: white !important;
+  font-size: 0.85rem!important;
+  padding: 0!important;
+}
+
+.react-select__multi-value__remove {
+  color: white!important;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}

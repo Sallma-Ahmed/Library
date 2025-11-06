@@ -23,7 +23,7 @@ const { category, id } = useParams();
     name: "Salma Ahmed",
     avatar: "/images/icon.png",
   };
- 
+
   return (
     <div>
       {/* Navbar */}
@@ -85,16 +85,16 @@ onClick={() => navigate("/createEnvironment")}
                       <h3>
                         {template.name} ({env.name})
                       </h3>
+<button
+  className="env-edit"
+  onClick={(e) => {
+    e.stopPropagation();
+    navigate(`/editEnvironment/${id}/${env.envId}`);
+  }}
+>
+  <FaEdit className="edit-icon" />
+</button>
 
-                      <button
-                        className="env-edit"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          alert(`Edit ${env.name} environment`);
-                        }}
-                      >
-                        {/* <FaEdit className="edit-icon" /> */}
-                      </button>
                     </div>
                     <div className="envfooter">
                         <div className="env-subtitle">

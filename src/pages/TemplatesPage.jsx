@@ -14,7 +14,7 @@ export default function TemplatesPage() {
   const [selectedSubject, setSelectedSubject] = useState("All");
 
   // Pagination
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
   const filtered = data.filter(
